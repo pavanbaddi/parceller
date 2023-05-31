@@ -1,0 +1,138 @@
+@import "vars";
+
+.flex{
+    display: flex;
+}
+
+.flex-center{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.bg-light__grey{
+    background-color: #EAEAEA!important;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.container{
+    & > .inner{
+        width: 80%;
+        margin: auto;
+
+        .header-wrapper{
+            h2, p{
+                text-align: center;
+            }
+
+            h2{
+                padding-bottom: 20px;
+            }
+
+            p{
+                &:last-child{
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    &.v-space-md{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &.v-space-sm{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &.v-space-xs{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+}
+
+
+.hidden-sm{}
+.hidden-md-lg{}
+.overflow-x-hidden{
+    overflow-x: hidden;
+}
+
+.mt-5{
+    margin-top: 5px;
+}
+
+.mt-10{
+    margin-top: 10px;
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.mb-15{
+    margin-bottom: 15px;
+}
+
+.text-danger{
+    color: $red;
+}
+
+.sticky{
+    z-index: 2;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+@media only screen and (min-width: 500px)  {
+    .hidden-md-lg{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 300px)  and (max-width: 600px) {
+    .container{
+        & > .inner{
+            width: 95%;
+
+            .header-wrapper{
+                h2, p{
+                    text-align: center;
+                }
+    
+                h2{
+                    padding-bottom: 10px;
+                    font-size:16px;
+                }
+    
+                p{
+                    font-size:10px;
+                    &:last-child{
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        &.v-space-md{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    
+    }
+
+    .hidden-sm{
+        display: none;
+    }
+}

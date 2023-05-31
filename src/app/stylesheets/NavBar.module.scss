@@ -1,0 +1,97 @@
+@import "vars";
+@import "helpers";
+
+.nav-container{
+  background-color: $secondary-color;
+  .inner{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      grid-auto-rows: auto;
+      padding: 10px 0;
+
+      .inner-item{
+          .menus-list{
+              display: flex;
+              align-items: center;
+              justify-content: space-evenly;
+  
+              .menu-list__item{
+                  padding-top:10px;
+                  padding-bottom:10px;
+
+                  a{
+                      font-weight: 600;
+                      font-size: 14px;
+                  }
+              }
+          }
+
+          &:nth-child(3){
+              display: flex;
+              .action-wrapper{
+                  width: 100%;
+                  text-align: right;
+                  padding-top:10px;
+                  padding-bottom:10px;
+              }
+          }
+      }
+  }
+}
+
+
+
+@media only screen and (min-width: 300px)  and (max-width: 600px) {
+  .nav-container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .inner{
+          grid-template-columns: repeat(2, 1fr);
+          .inner-item{
+              .logo-wrapper{
+                  img{
+                      height: 30px;
+                  }
+              }
+
+              &:nth-child(3){
+                  .action-wrapper{
+                      padding-top: 0!important;
+                      padding-bottom: 0!important;
+                      div.flex-inner{
+                          display: flex;
+                          justify-content:flex-end;
+                          align-items: center;
+                      }
+                  }
+              }
+
+
+              .menus-list{
+                  display: block;
+                  
+                  .menu-list__item{
+                      padding-left: 15px;
+                  }
+              }
+          }
+      }
+
+      .menu-wrapper{
+          background-color: $primary-color;
+          position: fixed;
+          width: 100%;
+          left: 0;
+          bottom: -150px;
+          z-index: 1;
+          transition: bottom 0.3s;
+      }
+
+      .menu-wrapper.active{
+          bottom: 0px;
+      }
+  }
+}
