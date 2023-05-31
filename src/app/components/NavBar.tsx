@@ -1,26 +1,9 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from '../stylesheets/NavBar.module.scss';
-const withStyles = (stylesheet: Object, keys: Array | string): string => {
-  let text = '';
+import funcs from '../functions';
 
-  if (Array.isArray(keys)) {
-    for (let index in keys) {
-      const key = keys[index];
-      const styleName = stylesheet[key];
-
-      if (styleName) {
-        text = `${text} ${styleName}`;
-      }
-    }
-  } else {
-    const styleName = stylesheet[keys];
-    if (styleName) {
-      text = `${styleName}`;
-    }
-  }
-
-  return text;
-};
+const { withStyles } = funcs;
 
 export default function NavBar() {
   return (
@@ -28,7 +11,12 @@ export default function NavBar() {
       <div className={withStyles(styles, 'inner')}>
         <div className={withStyles(styles, 'inner-item')}>
           <div className={withStyles(styles, 'logo-wrapper')}>
-            <img src="./assets/images/logo.png" alt="" />
+            <Image
+              src="/assets/images/logo.png"
+              width={155}
+              height={52}
+              alt=""
+            />
           </div>
         </div>
 
@@ -73,11 +61,21 @@ export default function NavBar() {
             <div className={withStyles(styles, 'hidden-md-lg')}>
               <div className={withStyles(styles, 'flex-inner')}>
                 <div id="login-btn-mobile">
-                  <img src="./assets/icons/login.png" alt="" />
+                  <Image
+                    src="/assets/icons/login.png"
+                    alt=""
+                    width={30}
+                    height={30}
+                  />
                 </div>
 
                 <div id="mobile-menu-wrapper">
-                  <img src="./assets/icons/menu.png" alt="" />
+                  <Image
+                    src="/assets/icons/menu.png"
+                    alt=""
+                    width={30}
+                    height={30}
+                  />
                 </div>
               </div>
             </div>
