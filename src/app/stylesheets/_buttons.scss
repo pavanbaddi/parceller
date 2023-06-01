@@ -1,0 +1,42 @@
+@import './vars';
+.btn{
+    border: transparent;
+    background: #EAEAEA;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-primary{
+    border: 1px solid #4D7DB2;
+    background: #4D7DB2;
+    color:#FFFFFF;
+}
+
+.btn-plain{
+    background-color: #FFF;
+    padding: 0;
+}
+
+.btn-block{
+    width: 100%;
+}
+
+.btn-container{
+
+    background-color: $black;
+    padding: 15px 20px;
+    color: $white;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    
+    input{
+        outline: none;
+        border: none;
+        background-color: transparent;
+        color: $white;
+    }
+}

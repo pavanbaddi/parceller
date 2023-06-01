@@ -1,0 +1,76 @@
+@import '../buttons';
+@import '../helpers';
+@import '../inputs';
+@import '../vars';
+
+.tracking-section{
+    position: relative;
+    .tracking-and-pricing-calculator-form-container{
+        position: absolute;
+        display: flex;
+        border-radius: 6px;
+        .tracking-wrapper{
+            width: 30%;
+            background-color: $primary-color;
+            padding: 20px 30px;
+            border-top-left-radius: 10px;
+            
+            .help-text{
+                padding-top: 10px;
+                font-size: 14px;
+                font-weight: 300;
+                font-style: italic;
+            }
+    
+            .btn-wrapper{
+                padding-left: 15px;
+            }
+    
+            .row-form{
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+        }
+    
+        .shipment-rate-wrapper{
+            width: 70%;
+            background-color: $white;
+            padding: 20px 30px;
+            border-bottom-right-radius: 10px;
+    
+            .row-form{
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+    
+                .row-form-item{
+                    margin-right: 15px;
+                    p{
+                        padding-top: 10px;
+                        font-size: 14px;
+                        font-weight: 300;
+                        font-style: italic;
+                    }
+                }
+    
+                .weight-select-wrapper{
+                    min-width: 60px;
+                }
+            }
+    
+        }
+    
+        .tracking-wrapper .inner > p, .shipment-rate-wrapper .inner > p{
+            padding-bottom: 15px;
+        }
+    }
+}
+
+@media only screen and (min-width: 300px)  and (max-width: 600px) {
+    .tracking-section{
+        .tracking-and-pricing-calculator-form-container{
+            
+        }
+    }
+}

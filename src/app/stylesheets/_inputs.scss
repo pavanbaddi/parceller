@@ -1,0 +1,64 @@
+@import 'vars';
+@import 'buttons';
+@import 'helpers';
+@import 'animations';
+
+.base-form-control{
+    box-sizing: border-box;
+    height: 35px;
+    border: 3px solid transparent;
+    border-radius: 6px;
+    background-color: #FEFEFE;
+    text-indent:5px;
+    outline: none;
+    width: 100%;
+
+    &:focus, &:focus-visible{
+        border: 3px solid #89BCFF!important;
+    }
+}
+
+input.form-control{
+    @extend .base-form-control;
+
+    &.line{
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        text-indent:0px;
+        color: $white;
+    }
+
+    // &.line::placeholder, &.line:-moz-input-placeholder, &.line::-webkit-input-placeholder{
+    //     font-size: 26px;
+    //     color:red;
+    // }
+
+    &.line+.line::before, &.line+.line::after{
+        content:"";
+        background-color: #666;
+        display: block;
+        width: 100%;
+        height: 2px;
+        position: relative;
+        top: 0px;
+        transition: 0.5s;
+    }
+
+    &.line+.line::after{
+        position: relative;
+        top:-2px;
+        width: 0%;
+    }
+
+    &.line:focus+.line::after{
+        background-color: #FFFFFF;
+        width: 100%;
+    }
+}
+
+select.form-control{
+    @extend .base-form-control;
+    @extend .bg-light__grey;
+    height: 33px;
+}

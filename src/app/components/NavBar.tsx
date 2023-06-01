@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEvent, MouseEventHandler } from 'react';
 import Image from 'next/image';
 import styles from '../stylesheets/NavBar.module.scss';
 import funcs from '../functions';
@@ -6,6 +6,9 @@ import funcs from '../functions';
 const { withStyles } = funcs;
 
 export default function NavBar() {
+  const handleVoid = (e: MouseEvent<HTMLAnchorElement>): void =>
+    e.preventDefault();
+
   return (
     <div className={withStyles(styles, ['container', 'nav-container'])}>
       <div className={withStyles(styles, 'inner')}>
@@ -27,18 +30,24 @@ export default function NavBar() {
             </div>
 
             <div className={withStyles(styles, 'menu-list__item')}>
-              <a href="#">About</a>
+              <a href="#" onClick={handleVoid}>
+                About
+              </a>
             </div>
 
             <div
               className={withStyles(styles, 'menu-list__item')}
               id="credits-link"
             >
-              <a href="javascript:void(0);">Credits</a>
+              <a href="#" onClick={handleVoid}>
+                Credits
+              </a>
             </div>
 
             <div className={withStyles(styles, 'menu-list__item')}>
-              <a href="#">Services</a>
+              <a href="#" onClick={handleVoid}>
+                Services
+              </a>
             </div>
           </div>
         </div>
