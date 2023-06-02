@@ -7,6 +7,7 @@ import WhyChooseUsSection from '../page-components/WhyChooseUsSection';
 import ContactSection from '../page-components/ContactSection';
 import TestimonialSection from '../page-components/TestimonialSection';
 import SocialMediaSection from '../page-components/SocialMediaSection';
+import FooterSection from '../page-components/FooterSection';
 import styles from '../stylesheets/index/Index.module.scss';
 import funcs from '../functions';
 
@@ -23,6 +24,7 @@ export default function index() {
       <ContactSection />
       <TestimonialSection />
       <SocialMediaSection />
+      <FooterSection />
     </div>
   );
 }

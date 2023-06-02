@@ -1,0 +1,33 @@
+@import "../vars";
+
+.footer-container{
+    background-color: $secondary-color;
+    .inner{
+        .items{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+
+            .item{
+                h4, p{
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 300px)  and (max-width: 600px) {
+    .footer-container{
+        .inner{
+            .items{
+                display: block;
+                .item{
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid $light-dark-color-2;
+                }
+            }
+        }
+    }
+}
