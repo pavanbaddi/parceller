@@ -1,0 +1,51 @@
+@import "../vars";
+
+.social-media-container{
+    .inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo-wrapper{
+            img{
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        div{
+            .items{
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+
+                img{
+                    width:30px;
+                    height:30px;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 300px)  and (max-width: 600px) {
+    .social-media-container{
+        .inner{
+            justify-content: center;
+            .logo-wrapper{
+                display: none;
+            }
+
+            div{
+                .items{
+                    img{
+                        width:22px;
+                        height:22px;
+                    }
+                }
+            }
+        }
+    }
+}
