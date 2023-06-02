@@ -1,14 +1,12 @@
-import React, { MouseEvent, MouseEventHandler } from 'react';
+import React, { MouseEvent } from 'react';
 import Image from 'next/image';
 import styles from '../stylesheets/NavBar.module.scss';
 import funcs from '../functions';
+import Link from './Link';
 
 const { withStyles } = funcs;
 
 export default function NavBar() {
-  const handleVoid = (e: MouseEvent<HTMLAnchorElement>): void =>
-    e.preventDefault();
-
   return (
     <div className={withStyles(styles, ['container', 'nav-container'])}>
       <div className={withStyles(styles, 'inner')}>
@@ -26,28 +24,22 @@ export default function NavBar() {
         <div className={withStyles(styles, ['inner-item', 'menu-wrapper'])}>
           <div className={withStyles(styles, 'menus-list')}>
             <div className={withStyles(styles, 'menu-list__item')}>
-              <a href="#">Home</a>
+              <Link text="Home" />
             </div>
 
             <div className={withStyles(styles, 'menu-list__item')}>
-              <a href="#" onClick={handleVoid}>
-                About
-              </a>
+              <Link text="About" />
             </div>
 
             <div
               className={withStyles(styles, 'menu-list__item')}
               id="credits-link"
             >
-              <a href="#" onClick={handleVoid}>
-                Credits
-              </a>
+              <Link text="Credits" />
             </div>
 
             <div className={withStyles(styles, 'menu-list__item')}>
-              <a href="#" onClick={handleVoid}>
-                Services
-              </a>
+              <Link text="Services" />
             </div>
           </div>
         </div>
@@ -55,7 +47,7 @@ export default function NavBar() {
         <div className={withStyles(styles, 'inner-item')}>
           <div className={withStyles(styles, 'action-wrapper')}>
             <a
-              href="javascript:void(0);"
+              href="#"
               className={withStyles(styles, [
                 'btn',
                 'btn-primary',

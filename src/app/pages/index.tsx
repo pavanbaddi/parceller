@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from '../components/NavBar';
 import LandingSection from '../page-components/LandingSection';
 import TrackingSection from '../page-components/TrackingSection';
+import ClientsSection from '../page-components/ClientsSection';
 import styles from '../stylesheets/index/Index.module.scss';
 import funcs from '../functions';
 
@@ -13,6 +14,7 @@ export default function index() {
       <NavBar />
       <LandingSection />
       <TrackingSection />
+      <ClientsSection />
     </div>
   );
 }

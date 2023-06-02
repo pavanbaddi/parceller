@@ -1,0 +1,39 @@
+@import '../buttons';
+@import '../helpers';
+@import '../inputs';
+@import '../vars';
+
+.clients-list-container{
+    background-color: $secondary-color;
+    padding-top: 180px!important;
+
+    .inner{
+        width: 80%;
+        margin: auto;
+        .inner-list{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+@media only screen and (min-width: 300px)  and (max-width: 600px) {
+    .clients-list-container{
+        padding-top: 10px!important;
+        .inner{
+            width: 95%;
+            margin: auto;
+            .inner-list{
+                overflow-x: scroll;
+
+                div{
+                    height: 50px;
+                    img{
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
