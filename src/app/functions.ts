@@ -1,25 +1,30 @@
 const withStyles = (stylesheet: Object, keys: Array | string): string => {
-    let text = '';
-  
-    if (Array.isArray(keys)) {
-      for (let index in keys) {
-        const key = keys[index];
-        const styleName = stylesheet[key];
-  
-        if (styleName) {
-          text = `${text} ${styleName}`;
-        }
-      }
-    } else {
-      const styleName = stylesheet[keys];
+  let text = '';
+  let changedKeys = keys;
+
+  if (typeof keys === 'string') {
+    changedKeys = keys.split(' ');
+  }
+
+  if (Array.isArray(changedKeys)) {
+    for (let index in changedKeys) {
+      const key = changedKeys[index];
+      const styleName = stylesheet[key];
+
       if (styleName) {
-        text = `${styleName}`;
+        text = `${text} ${styleName}`;
       }
     }
-  
-    return text;
+  } else {
+    const styleName = stylesheet[keys];
+    if (styleName) {
+      text = `${styleName}`;
+    }
+  }
+
+  return text;
 };
-  
+
 export default {
-    withStyles
+  withStyles,
 };
