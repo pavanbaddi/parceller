@@ -1,0 +1,89 @@
+@import "../vars";
+
+.contact-container{
+    .inner{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+
+        .form-container{
+            background-color: $secondary-color;
+            padding: 50px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .form-containner__wrapper{
+                width: 100%;
+
+                .text-1{
+                    font-weight: 600;
+                }
+
+                .text-1, .text-2{
+                    margin-bottom: 3px;
+                }
+                
+                .text-2, .text-3{
+                    font-size: 40px;
+                }
+                
+                .text-3{
+                    margin-bottom: 15px;
+                }
+
+                form{
+                    display: block;
+                    width: 100%;
+
+                    .form-wrapper-1{
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 10px;
+                    }
+
+                    .form-wrapper-3{
+                        width: 100%;
+                    }
+
+                    .form-wrapper-1, .form-wrapper-2, .form-wrapper-3{
+                        padding-bottom: 20px;
+                    }
+
+                    .form-wrapper-1 .form-group{
+                        padding-right: 15px;
+                    }
+
+                    .form-wrapper-2{
+                        padding-bottom: 15px;
+                    }
+
+                    .form-wrapper-4{
+                        padding-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 300px)  and (max-width: 600px) {
+    .contact-container{
+        .inner{
+            grid-template-columns: repeat(1, 1fr);
+
+            .form-container{
+                padding: 20px 10px;
+
+                .form-containner__wrapper{
+                    .text-1{
+                        font-size: 10px;
+                    }
+                    .text-2, .text-3{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

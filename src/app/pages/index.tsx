@@ -4,6 +4,7 @@ import LandingSection from '../page-components/LandingSection';
 import TrackingSection from '../page-components/TrackingSection';
 import ClientsSection from '../page-components/ClientsSection';
 import WhyChooseUsSection from '../page-components/WhyChooseUsSection';
+import ContactSection from '../page-components/ContactSection';
 import styles from '../stylesheets/index/Index.module.scss';
 import funcs from '../functions';
 
@@ -17,6 +18,7 @@ export default function index() {
       <TrackingSection />
       <ClientsSection />
       <WhyChooseUsSection />
+      <ContactSection />
     </div>
   );
 }
