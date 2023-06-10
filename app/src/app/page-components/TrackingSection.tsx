@@ -33,7 +33,7 @@ export default function TrackingSection() {
                   </div>
                   <div>
                     <p className={withStyles(styles, ['help-text'])}>
-                      test here
+                      Tracking ID
                     </p>
                   </div>
                 </div>

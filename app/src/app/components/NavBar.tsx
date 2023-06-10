@@ -1,27 +1,71 @@
-import React, { MouseEvent } from 'react';
+"use client";
+
+import React, { MouseEvent, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import styles from '../stylesheets/NavBar.module.scss';
+import overlayStyles from '../stylesheets/page-components/OverlayContainer.module.scss';
 import funcs from '../functions';
 import Link from './Link';
 
 const { withStyles } = funcs;
 
 export default function NavBar() {
+  const mobileMenuWrapper = useRef(null);
+  const overlayContainer = useRef(null);
+  const menuContainer = useRef(null);
+  const activeStyleName = styles["active"];
+
+  useEffect((): void => {
+    mobileMenuWrapper.current = document.getElementById("mobile-menu-wrapper");
+    overlayContainer.current = document.querySelector("#overlay-container");
+    menuContainer.current = document.querySelector("#menu-wrapper");
+    attachEvents();
+  }, [])
+  
+  const attachEvents = (): void => {
+    mobileMenuWrapper.current.addEventListener("click", function (event) {
+        if (isActive()) {
+            hide();
+        } else {
+            show();
+        }
+    })
+  }
+
+  const isActive = (): boolean => {
+    return mobileMenuWrapper.current && mobileMenuWrapper.current.classList.contains("active")
+  }
+
+  const hide = (): void => {
+    mobileMenuWrapper.current.classList.remove(activeStyleName)
+    overlayContainer.current.remove(overlayStyles.active)
+    menuContainer.current.classList.remove(activeStyleName);
+  }
+
+  const show = (): void => {
+    mobileMenuWrapper.current.classList.add(activeStyleName);
+    overlayContainer.current.classList.add(overlayStyles.active);
+    menuContainer.current.classList.add(activeStyleName);
+    menuContainer.current.setAttribute("data-init", "opened");
+    setTimeout(() => {
+        menuContainer.current.setAttribute("data-init", "settled");
+    }, 500)
+  }
+
   return (
     <div className={withStyles(styles, ['container', 'nav-container'])}>
       <div className={withStyles(styles, 'inner')}>
         <div className={withStyles(styles, 'inner-item')}>
           <div className={withStyles(styles, 'logo-wrapper')}>
             <Image
+              fill
               src="/assets/images/logo.png"
-              width={155}
-              height={52}
-              alt=""
+              alt="Parcellar Logo"
             />
           </div>
         </div>
 
-        <div className={withStyles(styles, ['inner-item', 'menu-wrapper'])}>
+        <div id="menu-wrapper" className={withStyles(styles, ['inner-item', 'menu-wrapper'])}>
           <div className={withStyles(styles, 'menus-list')}>
             <div className={withStyles(styles, 'menu-list__item')}>
               <Link text="Home" />

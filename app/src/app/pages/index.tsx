@@ -8,6 +8,7 @@ import ContactSection from '../page-components/ContactSection';
 import TestimonialSection from '../page-components/TestimonialSection';
 import SocialMediaSection from '../page-components/SocialMediaSection';
 import FooterSection from '../page-components/FooterSection';
+import OverlayContainer from '../page-components/OverlayContainer';
 import styles from '../stylesheets/index/Index.module.scss';
 import funcs from '../functions';
 
@@ -15,7 +16,7 @@ const { withStyles } = funcs;
 
 export default function index() {
   return (
-    <div className={withStyles(styles, 'site-container')}>
+    <div id='site-container' className={withStyles(styles, 'site-container')}>
       <NavBar />
       <LandingSection />
       <TrackingSection />
@@ -25,6 +26,7 @@ export default function index() {
       <TestimonialSection />
       <SocialMediaSection />
       <FooterSection />
+      <OverlayContainer />
     </div>
   );
 }

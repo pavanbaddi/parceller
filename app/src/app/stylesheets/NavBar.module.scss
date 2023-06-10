@@ -12,31 +12,40 @@
       padding: 10px 0;
 
       .inner-item{
-          .menus-list{
-              display: flex;
-              align-items: center;
-              justify-content: space-evenly;
-  
-              .menu-list__item{
-                  padding-top:10px;
-                  padding-bottom:10px;
+            .logo-wrapper{
+                width: 155px;
+                height: 52px;
 
-                  a{
-                      font-weight: 600;
-                      font-size: 14px;
-                  }
-              }
-          }
+                & img{
+                    position: unset!important;
+                }
+            }
 
-          &:nth-child(3){
-              display: flex;
-              .action-wrapper{
-                  width: 100%;
-                  text-align: right;
-                  padding-top:10px;
-                  padding-bottom:10px;
-              }
-          }
+            .menus-list{
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+    
+                .menu-list__item{
+                    padding-top:10px;
+                    padding-bottom:10px;
+
+                    a{
+                        font-weight: 600;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            &:nth-child(3){
+                display: flex;
+                .action-wrapper{
+                    width: 100%;
+                    text-align: right;
+                    padding-top:10px;
+                    padding-bottom:10px;
+                }
+            }
       }
   }
 }
@@ -52,11 +61,10 @@
       .inner{
           grid-template-columns: repeat(2, 1fr);
           .inner-item{
-              .logo-wrapper{
-                  img{
-                      height: 30px;
-                  }
-              }
+                .logo-wrapper{
+                  height: 30px;
+                  width: 100px;
+                }
 
               &:nth-child(3){
                   .action-wrapper{
