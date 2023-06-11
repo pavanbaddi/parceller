@@ -22,9 +22,22 @@ const withStyles = (stylesheet: Object, keys: Array | string): string => {
     }
   }
 
-  return text;
+  return text.trim();
+};
+
+const usingStyles = (styles:Object) : Function => {
+  return (classes: string | Array<string>) => {
+    let newClasses: Array<string> = [];
+    if (typeof classes === "string") {
+      newClasses = classes.split(" ");
+    }  else if (Array.isArray(classes)) {
+      newClasses = classes;
+    }
+    return withStyles(styles, newClasses);
+  }
 };
 
 export default {
   withStyles,
+  usingStyles
 };

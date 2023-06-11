@@ -1,0 +1,15 @@
+#login-modal{
+    .modal-body{
+        .social-media-container{
+            button{
+                display: flex;
+                align-items: center;
+                gap: 7px;
+                justify-content: center;
+                img{
+                    width: 22px;
+                }
+            }
+        }
+    }
+}

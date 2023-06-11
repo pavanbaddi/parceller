@@ -9,7 +9,7 @@ import Link from './Link';
 
 const { withStyles } = funcs;
 
-export default function NavBar() {
+export default function NavBar({toggleLogin} : {toggleLogin:Function}) {
   const mobileMenuWrapper = useRef(null);
   const overlayContainer = useRef(null);
   const menuContainer = useRef(null);
@@ -98,6 +98,7 @@ export default function NavBar() {
                 'hidden-sm',
               ])}
               id="login-btn"
+              onClick={e => toggleLogin()}
             >
               <span></span>
               <span>Login</span>
