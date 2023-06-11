@@ -9,7 +9,7 @@ import Link from './Link';
 
 const { withStyles } = funcs;
 
-export default function NavBar({toggleLogin} : {toggleLogin:Function}) {
+export default function NavBar({toggleLogin, toggleAboutDeveloper} : {toggleLogin:Function, toggleAboutDeveloper:Function}) {
   const mobileMenuWrapper = useRef(null);
   const overlayContainer = useRef(null);
   const menuContainer = useRef(null);
@@ -72,7 +72,7 @@ export default function NavBar({toggleLogin} : {toggleLogin:Function}) {
             </div>
 
             <div className={withStyles(styles, 'menu-list__item')}>
-              <Link text="About" />
+              <Link text="About Developer" onClick={toggleAboutDeveloper} />
             </div>
 
             <div

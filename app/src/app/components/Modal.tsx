@@ -23,7 +23,7 @@ export default function Modal({
     body: React.ReactNode,
     isOpen: boolean,
     onDismiss: Function,
-    modalBodyClasses: Array<string>
+    modalBodyClasses?: Array<string>
     }): React.ReactElement {
     const mountRef = useRef(false);
     const modelRef = useRef(null);

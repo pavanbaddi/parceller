@@ -11,6 +11,7 @@ import SocialMediaSection from '../page-components/SocialMediaSection';
 import FooterSection from '../page-components/FooterSection';
 import OverlayContainer from '../page-components/OverlayContainer';
 import LoginModal from '../page-components/LoginModal';
+import AboutDeveloperModal from '../page-components/AboutDeveloperModal';
 import styles from '../stylesheets/index/Index.module.scss';
 import modelStyles from '../stylesheets/components/Modal.module.scss';
 import funcs from '../functions';
@@ -19,7 +20,10 @@ const { withStyles } = funcs;
 
 export default function Index() {
   const [loginModalState, setLoginModalState] = useState('closed');
+  const [aboutDeveloperModalState, setAboutDeveloperModalState] = useState('closed');
   const [visibleModals, setVisibleModals] = useState([]);
+
+  const isAnyModalVisible = () => [loginModalState, aboutDeveloperModalState].some(e => e === "open")
   
   return (
     <>
@@ -28,12 +32,15 @@ export default function Index() {
         className={[
           styles['site-container'],
           modelStyles['site-container'],
-          loginModalState === 'open' ? modelStyles['modal-active'] : '',
+          isAnyModalVisible() ? modelStyles['modal-active'] : '',
         ].join(' ')}
       >
         <NavBar
           toggleLogin={() => {
             setLoginModalState(loginModalState === 'open' ? 'closed' : 'open');
+          }}
+          toggleAboutDeveloper={() => {
+            setAboutDeveloperModalState(aboutDeveloperModalState === 'open' ? 'closed' : 'open');
           }}
         />
         <LandingSection />
@@ -48,6 +55,11 @@ export default function Index() {
       <LoginModal
         isOpen={loginModalState === 'open'}
         onDismiss={() => setLoginModalState('closed')}
+      />
+
+      <AboutDeveloperModal
+        isOpen={aboutDeveloperModalState === 'open'}
+        onDismiss={() => setAboutDeveloperModalState('closed')}
       />
       <OverlayContainer />
     </>
