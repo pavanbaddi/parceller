@@ -72,18 +72,15 @@ export default function NavBar({toggleLogin, toggleAboutDeveloper} : {toggleLogi
             </div>
 
             <div className={withStyles(styles, 'menu-list__item')}>
-              <Link text="About Developer" onClick={toggleAboutDeveloper} />
-            </div>
-
-            <div
-              className={withStyles(styles, 'menu-list__item')}
-              id="credits-link"
-            >
-              <Link text="Credits" />
+              <Link text="About Site & Developer" onClick={toggleAboutDeveloper} />
             </div>
 
             <div className={withStyles(styles, 'menu-list__item')}>
-              <Link text="Services" />
+              <Link text="Services" url="#services" />
+            </div>
+
+            <div className={withStyles(styles, 'menu-list__item')}>
+              <Link text="Testimonials"  url="#testimonials" />
             </div>
           </div>
         </div>

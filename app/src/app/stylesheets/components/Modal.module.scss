@@ -37,6 +37,10 @@
     .modal-body{
         padding-left: 20px;
         padding-right: 20px;
+        padding-bottom: 20px;
+
+        max-height: 350px;
+        overflow-y: scroll;
     }
 }
 .site-container.modal-active{
