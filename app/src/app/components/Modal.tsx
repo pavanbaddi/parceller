@@ -65,7 +65,7 @@ export default function Modal({
         })
     }
 
-    const closeVisibleModals = (event) => {
+    const closeVisibleModals = (event: Event) => {
         let visibleModals = document.querySelectorAll(".modal-container.visible");
         let anyModalOpen = visibleModals.length > 0;
         if (anyModalOpen) {
@@ -85,7 +85,7 @@ export default function Modal({
         }
     }
 
-    const didClickedOutside = (event, targetElement) : boolean => {
+    const didClickedOutside = (event: Event, targetElement: HTMLElement) : boolean => {
         const has = event.composedPath().includes(targetElement);
         console.log("didClickedOutside has", has)
         return has;
