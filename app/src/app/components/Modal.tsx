@@ -70,8 +70,7 @@ export default function Modal({
         let anyModalOpen = visibleModals.length > 0;
         if (anyModalOpen) {
             for (let modal of visibleModals) {
-                console.log('visibleModals', visibleModals)
-                const has = didClickedOutside(event, modal);
+                const has = didClickedOutside(event, modal as HTMLElement);
                 const obj = new ModalElement({
                     element: modal,
                     overlayContainer: overlayContainerRef.current,
