@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, MouseEventHandler } from 'react'
 import Image from "next/image";
 import styles from "../stylesheets/components/Modal.module.scss";
 import func from "../functions"
@@ -22,7 +22,7 @@ export default function Modal({
     heading:string,
     body: React.ReactNode,
     isOpen: boolean,
-    onDismiss: Function,
+    onDismiss: MouseEventHandler<HTMLButtonElement>,
     modalBodyClasses?: Array<string>
     }): React.ReactElement {
     const mountRef = useRef(false);
