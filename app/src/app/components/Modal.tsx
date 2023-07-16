@@ -61,7 +61,6 @@ export default function Modal({
     const init = () => {
         document.addEventListener("click", function (event) {
             closeVisibleModals(event);
-            // closeMenuOnClickedOutside(event);
         })
     }
 
