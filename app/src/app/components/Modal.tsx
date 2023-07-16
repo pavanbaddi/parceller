@@ -27,9 +27,9 @@ export default function Modal({
     }): React.ReactElement {
     const mountRef = useRef(false);
     const modelRef = useRef<HTMLElement|null>(null);
-    const overlayContainerRef = useRef(null);
-    const siteContainerRef = useRef(null);
-    const bodyRef = useRef(null);
+    const overlayContainerRef = useRef<HTMLElement|null>(null);
+    const siteContainerRef = useRef<HTMLElement|null>(null);
+    const bodyRef = useRef<HTMLElement|null>(null);
 
     useEffect(() => {
         modelRef.current = document.getElementById(id);
