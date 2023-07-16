@@ -8,15 +8,17 @@ export default function Link({
   onClick = null,
 }: {
   text: string;
-  url: string;
+  url?: string;
   onClick?: Function | null;
 }) {
   return (
     <a
       href={url}
-      {...(onClick && {
-        onClick: onClick,
-      })}
+      onClick={() => {
+        if (onClick) {
+          onClick()
+        }
+      }}
     >
       {text}
     </a>
