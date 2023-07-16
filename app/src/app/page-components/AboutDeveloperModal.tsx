@@ -29,7 +29,6 @@ function AboutDeveloperModal({isOpen, onDismiss} : {isOpen: boolean, onDismiss: 
           <a href="https://github.com/pavanbaddi/parceller" target="_blank" rel="noopener noreferrer" >Github</a> &nbsp;
           <a href="https://pavanbaddi.github.io/portfolios/" target="_blank" rel="noopener noreferrer">My Portfolio</a>
         </p>
-
       </div>
     </div>
   } />
