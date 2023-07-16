@@ -2,13 +2,13 @@ import React, {useState, useRef, useEffect} from 'react'
 
 export default function useTypingAnimation() {
     const typingData = useRef({
-        "texts": [],
+        "texts": [] as string[],
         "currentIndex": 0,
         "currentTextIndex": 0,
         "speed": 500,
         "pauseSpeed" : 200,
         "eraseSpeed" : 100,
-        "element": null,
+        "element": null as HTMLElement | null,
         "actionAfterEnd" : "stop" // choices: repeat,stop
     });
 
@@ -49,7 +49,9 @@ export default function useTypingAnimation() {
         let index = typingData.current.currentTextIndex;
         if (typingData.current.currentIndex < typingData.current.texts.length && index < getCurrentText().length) {
             let char = getCurrentText()[index]
-            typingData.current.element.innerHTML += char;
+            if (typingData.current.element) {
+                typingData.current.element.innerHTML += char;
+            }
             typingData.current.currentTextIndex++;
             setTimeout(runForwardAnimation, getSpeed());
         } else {
@@ -70,11 +72,13 @@ export default function useTypingAnimation() {
     }
 
     const clearTextAnimation = () => {
-        let text = typingData.current.element.innerHTML;
+        let text = typingData.current?.element?.innerHTML || "";
         if (text.length > 0) {
             let len = text.length - 1;
             text = text.slice(0, len);
-            typingData.current.element.innerHTML = text;
+            if (typingData.current.element) {
+                typingData.current.element.innerHTML = text;
+            }
             setTimeout(clearTextAnimation, getEraseSpeed());
         } else {
             typingData.current.currentTextIndex = 0;

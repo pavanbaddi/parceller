@@ -12,7 +12,10 @@ export default function LandingSection() {
 
   useEffect(() => {
     typingAnimationHook.setTexts(["Full Support", "Sample Text"]);
-    typingAnimationHook.setElement(document.getElementById("text-animation"));
+    const element = document.getElementById("text-animation");
+    if (element !== null) {
+      typingAnimationHook.setElement(element);
+    }
     typingAnimationHook.setSpeed(100);
     typingAnimationHook.setPauseSpeed(300);
     typingAnimationHook.setEraseSpeed(50);

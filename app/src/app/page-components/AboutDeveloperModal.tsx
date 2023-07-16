@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 import Modal from '../components/Modal';
 import styles from "../stylesheets/page-components/AboutDeveloperModal.module.scss";
 import func from "../functions"
@@ -8,7 +8,7 @@ const { usingStyles } = func;
 
 const getStyles = usingStyles(styles);
 
-function AboutDeveloperModal({isOpen, onDismiss} : {isOpen: boolean, onDismiss: Function}) : React.ReactElement {
+function AboutDeveloperModal({isOpen, onDismiss} : {isOpen: boolean, onDismiss: MouseEventHandler<HTMLButtonElement>}) : React.ReactElement {
   return <Modal isOpen={isOpen} onDismiss={onDismiss} id="about-developer" heading='About Site & Developer' body={
     <div>
       <div>

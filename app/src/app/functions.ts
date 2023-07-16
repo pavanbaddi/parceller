@@ -1,4 +1,7 @@
-const withStyles = (stylesheet: Object, keys: Array | string): string => {
+const withStyles = (
+  stylesheet: Object,
+  keys: Array<string> | string,
+): string => {
   let text = '';
   let changedKeys = keys;
 
@@ -9,14 +12,16 @@ const withStyles = (stylesheet: Object, keys: Array | string): string => {
   if (Array.isArray(changedKeys)) {
     for (let index in changedKeys) {
       const key = changedKeys[index];
-      const styleName = stylesheet[key];
+      if (stylesheet.hasOwnProperty(key)) {
+        const styleName = stylesheet[key as keyof typeof stylesheet];
 
-      if (styleName) {
-        text = `${text} ${styleName}`;
+        if (styleName) {
+          text = `${text} ${styleName}`;
+        }
       }
     }
   } else {
-    const styleName = stylesheet[keys];
+    const styleName = stylesheet[keys as keyof typeof stylesheet];
     if (styleName) {
       text = `${styleName}`;
     }
@@ -25,19 +30,19 @@ const withStyles = (stylesheet: Object, keys: Array | string): string => {
   return text.trim();
 };
 
-const usingStyles = (styles:Object) : Function => {
+const usingStyles = (styles: Object): Function => {
   return (classes: string | Array<string>) => {
     let newClasses: Array<string> = [];
-    if (typeof classes === "string") {
-      newClasses = classes.split(" ");
-    }  else if (Array.isArray(classes)) {
+    if (typeof classes === 'string') {
+      newClasses = classes.split(' ');
+    } else if (Array.isArray(classes)) {
       newClasses = classes;
     }
     return withStyles(styles, newClasses);
-  }
+  };
 };
 
 export default {
   withStyles,
-  usingStyles
+  usingStyles,
 };
