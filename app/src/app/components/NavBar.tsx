@@ -103,7 +103,7 @@ export default function NavBar({
               <Link
                 text="About Site & Developer"
                 onClick={toggleAboutDeveloper}
-              />
+              /> 
             </div>
 
             <div className={withStyles(styles, 'menu-list__item')}>
