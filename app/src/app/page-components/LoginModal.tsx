@@ -14,7 +14,7 @@ const getButtonsStyles = usingStyles(buttonsStyles);
 const getInputStyles = usingStyles(inputStyles);
 
 
-export default function LoginModal({ isOpen, onDismiss }: { isOpen: boolean, onDismiss: Function }): React.ReactElement {
+export default function LoginModal({ isOpen, onDismiss }: { isOpen: boolean, onDismiss: React.MouseEventHandler<HTMLButtonElement> }): React.ReactElement {
   return <Modal
     isOpen={isOpen}
     onDismiss={onDismiss}
