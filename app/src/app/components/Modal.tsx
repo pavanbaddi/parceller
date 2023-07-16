@@ -26,7 +26,7 @@ export default function Modal({
     modalBodyClasses?: Array<string>
     }): React.ReactElement {
     const mountRef = useRef(false);
-    const modelRef = useRef(null);
+    const modelRef = useRef<HTMLInputElement>(null);
     const overlayContainerRef = useRef(null);
     const siteContainerRef = useRef(null);
     const bodyRef = useRef(null);
