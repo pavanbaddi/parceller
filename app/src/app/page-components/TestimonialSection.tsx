@@ -15,7 +15,7 @@ export default function TestimonialSection() {
       "path": "/assets/images/testimonials/1.png",
       "name": "Pavan Baddi",
       "designation": "Software Engineer",
-      "desc" : "Employees of the company showed a high level of professionalism in the choice of vehicles and the preparation of financial documentation. I was also pleased with the free approach in taking into account the various wishes of the client."
+      "desc" : "Absolutely delighted with the service. My package was delivered quickly and without any issues. The tracking feature was helpful, and I knew exactly when to expect my delivery."
     }, 
   ];
   const [sliderRef, instanceRef] = useKeenSlider()
