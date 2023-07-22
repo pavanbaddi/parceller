@@ -8,6 +8,10 @@ import { useKeenSlider } from 'keen-slider/react';
 
 const { withStyles } = funcs;
 
+interface ClientType {
+  src: string
+}
+
 export default function ClientsSection() {
   const clients = [
     {
@@ -48,7 +52,7 @@ export default function ClientsSection() {
           <h2>Over 93 Clients All Over The World</h2>
         </div>
         <div ref={sliderRef} className={`${withStyles(styles, ['inner-list'])} keen-slider`}>
-          {clients.map((item: Object, index: number) => {
+          {clients.map((item: ClientType, index: number) => {
             return (
               <div key={index.toString()} className='keen-slider__slide'  >
                 <Image
