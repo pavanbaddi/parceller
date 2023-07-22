@@ -107,7 +107,7 @@ export default function NavBar({
             </div>
 
             <div className={withStyles(styles, 'menu-list__item')}>
-              <Link text="Services" url="#services" />
+              <Link text="Why Choose Us" url="#why_choose_us" />
             </div>
 
             <div className={withStyles(styles, 'menu-list__item')}>

@@ -11,14 +11,14 @@ export default function LandingSection() {
   const typingAnimationHook = useTypingAnimation();
 
   useEffect(() => {
-    typingAnimationHook.setTexts(["Full Support", "Sample Text"]);
+    typingAnimationHook.setTexts(["Lightning-Fast Deliveries", "Transparent Tracking", "Customer-Centric Support"]);
     const element = document.getElementById("text-animation");
     if (element !== null) {
       typingAnimationHook.setElement(element);
     }
-    typingAnimationHook.setSpeed(100);
-    typingAnimationHook.setPauseSpeed(300);
-    typingAnimationHook.setEraseSpeed(50);
+    typingAnimationHook.setSpeed(200);
+    typingAnimationHook.setPauseSpeed(500);
+    typingAnimationHook.setEraseSpeed(200);
     typingAnimationHook.start();
   }, []);
 
@@ -30,7 +30,7 @@ export default function LandingSection() {
           <div>
             <p>International Logistics</p>
             <h1 id="text-animation" ></h1>
-            <p>We know everything about the safest and the fastest shipping. We help you build your successful business.</p>
+            <p>Swift, Secure, and Reliable. Our Courier Services Exceed Expectations</p>
           </div>
         </div>
       </div>

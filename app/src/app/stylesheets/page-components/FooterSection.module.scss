@@ -3,7 +3,10 @@
 
 .footer-container{
     background-color: $secondary-color;
+    background-image: url("/assets/images/bg-1.png");
     .inner{
+        
+
         .items{
             display: grid;
             grid-template-columns: repeat(4, 1fr);

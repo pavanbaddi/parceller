@@ -19,23 +19,23 @@ export default function SocialMediaSection() {
 
         <div>
           <div className={withStyles(styles, 'items')}>
-            <div className={withStyles(styles, 'item')}>
+            <a href="#!" className={withStyles(styles, 'item')}>
               <Image
                 src="/assets/icons/facebook.png"
                 width={30}
                 height={30}
                 alt=""
               />
-            </div>
+            </a>
 
-            <div className={withStyles(styles, 'item')}>
+            <a href="#!" className={withStyles(styles, 'item')}>
               <Image
                 src="/assets/icons/twitter.png"
                 width={30}
                 height={30}
                 alt=""
               />
-            </div>
+            </a>
           </div>
         </div>
       </div>

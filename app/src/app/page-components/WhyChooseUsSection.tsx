@@ -8,7 +8,7 @@ const { withStyles } = funcs;
 export default function WhyChooseUsSection() {
   const list = [
     {
-      path: 'https://uploads-ssl.webflow.com/63ede56f5ceca72669fcaced/63f2009bdff26411a67191d3_why%20choose-1.svg',
+      path: '/assets/images/drone.png',
       text: 'Fast Delivery',
       subText: 'Helps you move items faster',
     },
@@ -31,7 +31,7 @@ export default function WhyChooseUsSection() {
 
   return (
     <div
-      id="services"
+      id="why_choose_us"
       className={withStyles(styles, ['container', 'why-choose-us-container'])}
     >
       <div className={withStyles(styles, ['inner'])}>

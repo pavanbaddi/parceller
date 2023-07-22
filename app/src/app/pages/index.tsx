@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { MouseEventHandler, useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
 import LandingSection from '../page-components/LandingSection';
 import TrackingSection from '../page-components/TrackingSection';
@@ -24,6 +24,10 @@ export default function Index() {
   const [visibleModals, setVisibleModals] = useState([]);
 
   const isAnyModalVisible = () => [loginModalState, aboutDeveloperModalState].some(e => e === "open")
+
+  const toggleAboutDeveloper: MouseEventHandler<HTMLAnchorElement> = (): void  => {
+    setAboutDeveloperModalState(aboutDeveloperModalState === 'open' ? 'closed' : 'open')
+  }
   
   return (
     <>
@@ -39,9 +43,7 @@ export default function Index() {
           toggleLogin={() => {
             setLoginModalState(loginModalState === 'open' ? 'closed' : 'open');
           }}
-          toggleAboutDeveloper={() => {
-            setAboutDeveloperModalState(aboutDeveloperModalState === 'open' ? 'closed' : 'open');
-          }}
+          toggleAboutDeveloper={toggleAboutDeveloper}
         />
         <LandingSection />
         <TrackingSection />
@@ -50,7 +52,7 @@ export default function Index() {
         <ContactSection />
         <TestimonialSection />
         <SocialMediaSection />
-        <FooterSection />
+        <FooterSection toggleAboutDeveloper={toggleAboutDeveloper} />
       </div>
       <LoginModal
         isOpen={loginModalState === 'open'}
