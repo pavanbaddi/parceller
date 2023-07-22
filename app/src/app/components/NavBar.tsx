@@ -7,7 +7,7 @@ import overlayStyles from '../stylesheets/page-components/OverlayContainer.modul
 import funcs from '../functions';
 import Link from './Link';
 
-const { withStyles } = funcs;
+const { withStyles, isMobileView, didClickedInside } = funcs;
 
 export default function NavBar({
   toggleLogin,
@@ -41,7 +41,36 @@ export default function NavBar({
         },
       );
     }
+
+    if (menuContainer.current) {
+      menuContainer.current.addEventListener("click", function (event) {
+        if (isMobileView()) {
+          hide();
+        }
+      })
+    }
+
+    let body = document.body;
+    if (body) {
+      body.addEventListener("click", function (event) {
+        if (isMobileView()) {
+          const has = didClickedInside(event, menuContainer.current as HTMLElement);
+          if (!has && isSettled()) {
+            hide();
+          }
+        }
+      });
+    }
+
+    let mobileLoginIcon = document.querySelector("#login-btn-mobile");
+    if (mobileLoginIcon) {
+      mobileLoginIcon.addEventListener("click", (event: Event) => {
+        toggleLogin();
+      });
+    }
   };
+
+
 
   const isActive = (): boolean => {
     return mobileMenuWrapper.current &&
@@ -80,6 +109,10 @@ export default function NavBar({
       }, 500);
     }
   };
+
+  const isSettled = () => {
+    return menuContainer.current && menuContainer.current.getAttribute("data-init") === "settled";
+  }
 
   return (
     <div className={withStyles(styles, ['container', 'nav-container'])}>
@@ -134,7 +167,7 @@ export default function NavBar({
 
             <div className={withStyles(styles, 'hidden-md-lg')}>
               <div className={withStyles(styles, 'flex-inner')}>
-                <div id="login-btn-mobile">
+                <div id="login-btn-mobile" >
                   <Image
                     src="/assets/icons/login.png"
                     alt=""

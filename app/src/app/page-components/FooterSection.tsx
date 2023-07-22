@@ -25,10 +25,10 @@ export default function FooterSection({ toggleAboutDeveloper } : { toggleAboutDe
               <a href="#!" onClick={toggleAboutDeveloper}>About Site & Developer</a>
             </p>
             <p>
-              <a href="#">Why Choose Us</a>
+              <a href="#why_choose_us">Why Choose Us</a>
             </p>
             <p>
-              <a href="#">Testimonials</a>
+              <a href="#testimonials">Testimonials</a>
             </p>
           </div>
 

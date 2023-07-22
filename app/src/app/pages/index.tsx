@@ -1,5 +1,5 @@
 'use client';
-import React, { MouseEventHandler, useEffect, useState } from 'react';
+import React, { MouseEventHandler, useState, useEffect } from 'react';
 import NavBar from '../components/NavBar';
 import LandingSection from '../page-components/LandingSection';
 import TrackingSection from '../page-components/TrackingSection';
@@ -16,7 +16,7 @@ import styles from '../stylesheets/index/Index.module.scss';
 import modelStyles from '../stylesheets/components/Modal.module.scss';
 import funcs from '../functions';
 
-const { withStyles } = funcs;
+const { isMobileView } = funcs;
 
 export default function Index() {
   const [loginModalState, setLoginModalState] = useState('closed');
@@ -28,6 +28,10 @@ export default function Index() {
   const toggleAboutDeveloper: MouseEventHandler<HTMLAnchorElement> = (): void  => {
     setAboutDeveloperModalState(aboutDeveloperModalState === 'open' ? 'closed' : 'open')
   }
+
+  useEffect(() => { 
+    
+  }, [])
   
   return (
     <>

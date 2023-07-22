@@ -60,4 +60,8 @@
     .modal-container{
         width: 90%;
     }
+
+    .site-container.modal-active{
+        transform: scale(1);
+    }
 }

@@ -11,20 +11,27 @@ const { withStyles } = funcs;
 export default function ClientsSection() {
   const clients = [
     {
-      src: '/assets/images/clients/1.png',
+      src: '/assets/images/clients/2.png',
     },
     {
-      src: '/assets/images/clients/1.png',
+      src: '/assets/images/clients/3.png',
     },
     {
-      src: '/assets/images/clients/1.png',
+      src: '/assets/images/clients/4.png',
     },
     {
-      src: '/assets/images/clients/1.png',
+      src: '/assets/images/clients/5.png',
+    },
+    {
+      src: '/assets/images/clients/6.png',
+    },
+    {
+      src: '/assets/images/clients/7.png',
     },
   ]; 
 
-  const [sliderRef, instanceRef] = useKeenSlider({
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+    loop: true,
     slides: { perView: 4 },
   })
 
@@ -38,17 +45,17 @@ export default function ClientsSection() {
     >
       <div className={withStyles(styles, ['inner'])}>
         <div className={withStyles(styles, ['header-wrapper'])}>
-          <h2>Over 17,000 Clients All Over The World</h2>
+          <h2>Over 93 Clients All Over The World</h2>
         </div>
         <div ref={sliderRef} className={`${withStyles(styles, ['inner-list'])} keen-slider`}>
           {clients.map((item: Object, index: number) => {
             return (
-              <div key={index.toString()} className='keen-slider__slide' >
+              <div key={index.toString()} className='keen-slider__slide'  >
                 <Image
-                  src="/assets/images/clients/1.png"
-                  width={128}
-                  height={46}
+                  src={item.src}
                   alt=""
+                  width={80}
+                  height={80}
                 />
               </div>
             );

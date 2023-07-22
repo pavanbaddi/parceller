@@ -42,7 +42,19 @@ const usingStyles = (styles: Object): Function => {
   };
 };
 
+const isMobileView = () : boolean => {
+  let val : number = window.outerWidth;
+  return val < 600;
+}
+
+const didClickedInside = (event:Event, targetElement:HTMLElement) : boolean => {
+  const has = event.composedPath().includes(targetElement)
+  return has;
+}
+
 export default {
   withStyles,
   usingStyles,
+  isMobileView,
+  didClickedInside
 };

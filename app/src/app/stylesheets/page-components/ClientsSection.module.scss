@@ -11,9 +11,11 @@
         width: 80%;
         margin: auto;
         .inner-list{
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
 }
