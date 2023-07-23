@@ -29,7 +29,13 @@ export default function ContactSection() {
               <h1 className={withStyles(styles, ['text-3'])}>Get in touch!</h1>
             </div>
             <div>
-              <form action="" method="post">
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  alert('Site backend is under development');
+                }}
+                method="post"
+              >
                 <div
                   className={withStyles(styles, [
                     'form-wrapper',

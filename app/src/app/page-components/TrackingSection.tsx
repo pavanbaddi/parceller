@@ -47,6 +47,9 @@ export default function TrackingSection() {
                   <button
                     type="button"
                     className={withStyles(styles, ['btn', 'btn-primary'])}
+                    onClick={(e) => {
+                      alert("Site backend is under development");
+                    }}
                   >
                     Tracking
                   </button>
@@ -124,6 +127,9 @@ export default function TrackingSection() {
                   <button
                     type="button"
                     className={withStyles(styles, ['btn', 'btn-primary'])}
+                    onClick={(e) => {
+                      alert("Site backend is under development");
+                    }}
                   >
                     Check
                   </button>

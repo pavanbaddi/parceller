@@ -7,7 +7,6 @@ import inputStyles from '../stylesheets/components/Input.module.scss';
 import func from '../functions';
 
 const { withStyles, usingStyles } = func;
-
 const getStyles = usingStyles(styles);
 const getHelperStyles = usingStyles(helperStyles);
 const getButtonsStyles = usingStyles(buttonsStyles);
@@ -109,6 +108,12 @@ export default function LoginModal({
                   </span>
                 </button>
               </div>
+            </div>
+          </div>
+          <br />
+          <div className={getHelperStyles(['alert', 'alert-warning'])} >
+            <div>
+              <p>Site backend is under development</p>
             </div>
           </div>
         </>

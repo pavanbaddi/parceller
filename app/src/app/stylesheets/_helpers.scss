@@ -95,6 +95,13 @@
     top: 0;
 }
 
+.alert {
+    border:1px solid #EAEAEA;
+    border-radius: 6px;
+    padding: 10px 15px;
+    background-color: #EAEAEA;
+}
+
 @media only screen and (min-width: 500px)  {
     .hidden-md-lg{
         display: none;
