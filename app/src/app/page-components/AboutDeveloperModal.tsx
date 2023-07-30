@@ -22,7 +22,7 @@ function AboutDeveloperModal({isOpen, onDismiss} : {isOpen: boolean, onDismiss: 
         <br />
         <p>I&apos;m a Software Engineer and from time to time I keep on learning and developing portfolio projects for sake of learning and broadening my knowledge.</p>
         <br />
-        <p>In this case, it is to learn about Typescript in Next JS (using its Advance features) and also deploy this app using Docker on Amazon Ec2.</p>
+        <p>In this case, it is to learn about Typescript in Next JS (using its Advance features) and also deploy this app using Vercel.</p>
         <br />
         <p>You are free to use this theme on your other project. I have provided github link</p>
         <p>
