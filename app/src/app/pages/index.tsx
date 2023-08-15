@@ -16,6 +16,7 @@ import styles from '../stylesheets/index/Index.module.scss';
 import modelStyles from '../stylesheets/components/Modal.module.scss';
 import funcs from '../functions';
 import BookingModal from '../page-components/BookingModal';
+import {TrackingFormType} from "../lib/Types";
 
 const { isMobileView } = funcs;
 
@@ -24,7 +25,7 @@ export default function Index() {
   const [aboutDeveloperModalState, setAboutDeveloperModalState] = useState('closed');
   const [bookingModalState, setBookingModalState] = useState('closed');
   const [visibleModals, setVisibleModals] = useState([]); 
-  const [trackingForm, setTrackingForm] = useState<Object>({
+  const [trackingForm, setTrackingForm] = useState<TrackingFormType>({
     "pickupAddress": "",
     "destinationAddress": "",
     "weight": "",

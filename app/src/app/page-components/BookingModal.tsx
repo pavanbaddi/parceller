@@ -6,6 +6,8 @@ import helperStyles from '../stylesheets/components/Helper.module.scss';
 import buttonsStyles from '../stylesheets/components/Buttons.module.scss';
 import func from '../functions';
 import _ from 'lodash';
+import { TrackingFormType } from "../lib/Types";
+
 const { usingStyles } = func;
 
 const getStyles = usingStyles(styles);
@@ -18,14 +20,9 @@ export default function BookingModal({
   isOpen,
   onDismiss,
 }: {
-  trackingForm: {
-    pickupAddress: string;
-    destinationAddress: string;
-    weight: string;
-    weightUnit: string;
-  };
-  isOpen: boolean;
-  onDismiss: MouseEventHandler<HTMLButtonElement>;
+  trackingForm: TrackingFormType,
+  isOpen: boolean,
+  onDismiss: MouseEventHandler<HTMLButtonElement>
 }): React.ReactElement {
   const [form, setForm] = useState({
     contactNo: '',
