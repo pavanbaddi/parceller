@@ -65,10 +65,13 @@ export default function Index() {
           toggleAboutDeveloper={toggleAboutDeveloper}
           />
         <LandingSection />
-        <TrackingSection toggleBookingModal={(form:TrackingFormType) => {
+        <TrackingSection toggleBookingModal={(form: TrackingFormType) => {
           setBookingModalState(bookingModalState === 'open' ? 'closed' : 'open');
           setTrackingForm(form)
-        }} />
+        }}
+          setTrackingDetailsModalState={setTrackingDetailsModalState}
+          setTrackingDetails={setTrackingDetails}
+        />
         <ClientsSection />
         <WhyChooseUsSection />
         <ContactSection />

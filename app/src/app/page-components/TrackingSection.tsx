@@ -6,9 +6,12 @@ import Image from "next/image";
 
 const { withStyles } = funcs;
 
-export default function TrackingSection({ toggleBookingModal }: {
-  toggleBookingModal: Function
+export default function TrackingSection({ toggleBookingModal, setTrackingDetailsModalState, setTrackingDetails }: {
+  toggleBookingModal: Function,
+  setTrackingDetailsModalState: Function,
+  setTrackingDetails:Function
 }) {
+  const [trackingId, setTrackingId] = useState<string>("");
   const [trackButtonLoading, setTrackButtonLoading] = useState(false);
   const [form, setForm] = useState({
     "pickupAddress": "",
@@ -71,6 +74,8 @@ export default function TrackingSection({ toggleBookingModal }: {
                       type="text"
                       id="tracking_no"
                       className={withStyles(styles, ['form-control'])}
+                      value={trackingId}
+                      onChange={(e:ChangeEvent) => setTrackingId(_.get(e,"target.value", ""))}
                     />
                   </div>
                   <div>
