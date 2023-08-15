@@ -16,18 +16,24 @@ import styles from '../stylesheets/index/Index.module.scss';
 import modelStyles from '../stylesheets/components/Modal.module.scss';
 import funcs from '../functions';
 import BookingModal from '../page-components/BookingModal';
-import {TrackingFormType} from "../lib/Types";
-
-const { isMobileView } = funcs;
+import {TrackingDetailsType, TrackingFormType} from "../lib/Types";
+import TrackingDetailsModal from '../page-components/TrackingDetailsModal';
 
 export default function Index() {
   const [loginModalState, setLoginModalState] = useState('closed');
   const [aboutDeveloperModalState, setAboutDeveloperModalState] = useState('closed');
   const [bookingModalState, setBookingModalState] = useState('closed');
-  const [visibleModals, setVisibleModals] = useState([]); 
+  const [trackingDetailsModalState, setTrackingDetailsModalState] = useState('closed');
   const [trackingForm, setTrackingForm] = useState<TrackingFormType>({
     "pickupAddress": "",
     "destinationAddress": "",
+    "weight": "",
+    "weightUnit": "",
+  }); 
+
+  const [trackingDetails, setTrackingDetails] = useState<TrackingDetailsType>({
+    "originShipment": "",
+    "destinationShipment": "",
     "weight": "",
     "weightUnit": "",
   }); 
@@ -59,7 +65,7 @@ export default function Index() {
           toggleAboutDeveloper={toggleAboutDeveloper}
           />
         <LandingSection />
-        <TrackingSection toggleBookingModal={(form:Object) => {
+        <TrackingSection toggleBookingModal={(form:TrackingFormType) => {
           setBookingModalState(bookingModalState === 'open' ? 'closed' : 'open');
           setTrackingForm(form)
         }} />
@@ -85,6 +91,13 @@ export default function Index() {
         isOpen={bookingModalState === 'open'}
         onDismiss={() => setBookingModalState('closed')}
       />
+
+      <TrackingDetailsModal
+        trackingForm={trackingDetails}
+        isOpen={trackingDetailsModalState === 'open'}
+        onDismiss={() => setTrackingDetailsModalState('closed')}
+      />
+
       <OverlayContainer />
     </>
   );

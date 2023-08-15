@@ -5,8 +5,16 @@ export type TrackingFormType = {
     weightUnit: string;
 }
 
-// const exportable = {
-//     TrackingFormType
-// }
+export type BookingCardType = {
+    originShipment  : string,
+    destinationShipment : string,
+    weight : string,
+    weightUnit : string,
+}
 
-// export default exportable
+export type TrackingDetailsType = {
+    originShipment : string,
+    destinationShipment : string,
+    weight : string,
+    weightUnit : string,
+}
