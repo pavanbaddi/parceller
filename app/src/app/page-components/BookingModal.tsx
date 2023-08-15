@@ -37,7 +37,7 @@ export default function BookingModal({
     return /[!@#$%^&*()_\=\[\]{};':"\\|,.<>\/?]+/.test(str);
   }
 
-  const onCompleteBooking = (event: MouseEventHandler) => {
+  const onCompleteBooking: MouseEventHandler<HTMLButtonElement> = (event) => {
     let errors = [];
     if (_.isEmpty(form.contactNo)) {
       errors.push('Please enter contact number');
