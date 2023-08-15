@@ -6,7 +6,7 @@ const { withStyles } = funcs;
 
 export default function ContactSection() {
   return (
-    <div className={withStyles(styles, ['contact-container'])}>
+    <div id='contact-section' className={withStyles(styles, ['contact-container'])}>
       <div className={withStyles(styles, ['inner'])}>
         <div className={withStyles(styles, ['inner-item', 'map-container'])}>
           <iframe

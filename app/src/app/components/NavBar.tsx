@@ -1,6 +1,6 @@
 'use client';
 
-import React, { MouseEvent, useEffect, useRef } from 'react';
+import React, { MouseEvent, MouseEventHandler, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import styles from '../stylesheets/NavBar.module.scss';
 import overlayStyles from '../stylesheets/page-components/OverlayContainer.module.scss';
@@ -152,17 +152,16 @@ export default function NavBar({
         <div className={withStyles(styles, 'inner-item')}>
           <div className={withStyles(styles, 'action-wrapper')}>
             <a
-              href="#"
+              href="#contact-section"
               className={withStyles(styles, [
                 'btn',
                 'btn-primary',
                 'hidden-sm',
               ])}
               id="login-btn"
-              onClick={(e) => toggleLogin()}
             >
               <span></span>
-              <span>Login</span>
+              <span>Contact Us</span>
             </a>
 
             <div className={withStyles(styles, 'hidden-md-lg')}>
