@@ -2,13 +2,14 @@ import React,{ChangeEvent, useState} from 'react';
 import styles from '../stylesheets/page-components/TrackingSection.module.scss';
 import funcs from '../functions';
 import _ from "lodash";
+import Image from "next/image";
 
 const { withStyles } = funcs;
 
 export default function TrackingSection({ toggleBookingModal }: {
   toggleBookingModal: Function
 }) {
-
+  const [trackButtonLoading, setTrackButtonLoading] = useState(false);
   const [form, setForm] = useState({
     "pickupAddress": "",
     "destinationAddress": "",
@@ -89,10 +90,12 @@ export default function TrackingSection({ toggleBookingModal }: {
                     type="button"
                     className={withStyles(styles, ['btn', 'btn-primary'])}
                     onClick={(e) => {
-                      alert("Site backend is under development");
+                      setTrackButtonLoading(true)
                     }}
                   >
-                    Tracking
+                    {
+                      trackButtonLoading ? <Image src="/assets/icons/loading.gif" alt="Loading" width={15} height={15} /> : "Tracking"
+                    }
                   </button>
                 </div>
               </div>
