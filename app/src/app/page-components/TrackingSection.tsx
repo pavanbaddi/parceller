@@ -1,4 +1,4 @@
-import React,{ChangeEvent, useState} from 'react';
+import React,{ChangeEvent, MouseEventHandler, useState} from 'react';
 import styles from '../stylesheets/page-components/TrackingSection.module.scss';
 import funcs from '../functions';
 import _ from "lodash";
@@ -20,7 +20,7 @@ export default function TrackingSection({ toggleBookingModal, setTrackingDetails
     "weightUnit": "wg",
   });
 
-  const onPressCheck = (event: MouseEvent) => {
+  const onPressCheck: MouseEventHandler<HTMLButtonElement> = (event) => {
     let errors = [];
     if (_.isEmpty(form.pickupAddress)) {
       errors.push("Please enter origin shipment");
