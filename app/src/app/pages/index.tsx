@@ -15,13 +15,21 @@ import AboutDeveloperModal from '../page-components/AboutDeveloperModal';
 import styles from '../stylesheets/index/Index.module.scss';
 import modelStyles from '../stylesheets/components/Modal.module.scss';
 import funcs from '../functions';
+import BookingModal from '../page-components/BookingModal';
 
 const { isMobileView } = funcs;
 
 export default function Index() {
   const [loginModalState, setLoginModalState] = useState('closed');
   const [aboutDeveloperModalState, setAboutDeveloperModalState] = useState('closed');
-  const [visibleModals, setVisibleModals] = useState([]);
+  const [bookingModalState, setBookingModalState] = useState('closed');
+  const [visibleModals, setVisibleModals] = useState([]); 
+  const [trackingForm, setTrackingForm] = useState<Object>({
+    "pickupAddress": "",
+    "destinationAddress": "",
+    "weight": "",
+    "weightUnit": "",
+  }); 
 
   const isAnyModalVisible = () => [loginModalState, aboutDeveloperModalState].some(e => e === "open")
 
@@ -48,9 +56,12 @@ export default function Index() {
             setLoginModalState(loginModalState === 'open' ? 'closed' : 'open');
           }}
           toggleAboutDeveloper={toggleAboutDeveloper}
-        />
+          />
         <LandingSection />
-        <TrackingSection />
+        <TrackingSection toggleBookingModal={(form:Object) => {
+          setBookingModalState(bookingModalState === 'open' ? 'closed' : 'open');
+          setTrackingForm(form)
+        }} />
         <ClientsSection />
         <WhyChooseUsSection />
         <ContactSection />
@@ -66,6 +77,12 @@ export default function Index() {
       <AboutDeveloperModal
         isOpen={aboutDeveloperModalState === 'open'}
         onDismiss={() => setAboutDeveloperModalState('closed')}
+      />
+
+      <BookingModal
+        trackingForm={trackingForm}
+        isOpen={bookingModalState === 'open'}
+        onDismiss={() => setBookingModalState('closed')}
       />
       <OverlayContainer />
     </>
