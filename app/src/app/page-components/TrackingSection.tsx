@@ -202,7 +202,7 @@ export default function TrackingSection({ toggleBookingModal, setTrackingDetails
                     'weight-select-wrapper',
                   ])}
                 >
-                  <select onChange={(event: ChangeEvent) => {
+                  <select value={form.weightUnit} onChange={(event: ChangeEvent) => {
                     setForm({...form, weightUnit: _.get(event, "target.value", "wg")})
                   }} className={withStyles(styles, ['form-control'])}>
                     <option value="wg" selected={form.weightUnit === "wg"} >Wg</option>
