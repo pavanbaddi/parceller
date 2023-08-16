@@ -3,6 +3,7 @@ import styles from '../stylesheets/page-components/TrackingSection.module.scss';
 import funcs from '../functions';
 import _ from "lodash";
 import Image from "next/image";
+import { doGet } from "../lib/Datasource";
 
 const { withStyles } = funcs;
 
@@ -19,6 +20,35 @@ export default function TrackingSection({ toggleBookingModal, setTrackingDetails
     "weight": "0",
     "weightUnit": "wg",
   });
+
+  const fetchBookingDetails = () => {
+    if (trackButtonLoading === true) {
+      return
+    }
+    
+    setTrackButtonLoading(true)
+    doGet(`/bookings/${trackingId}`).then((response) => {
+      setTrackButtonLoading(false)
+      setTrackingDetails({
+        id: _.get(response,"id", ""),
+        originShipment: _.get(response,"origin_address", ""),
+        destinationShipment: _.get(response,"destination_address", ""),
+        price: _.get(response,"price", ""),
+        remarks: _.get(response,"remarks", ""),
+        status: _.get(response,"status", ""),
+        trackingId: _.get(response,"tracking_id", ""),
+        createdAt: _.get(response,"created_at", ""),
+        weight: _.get(response,"weight", ""),
+        weightUnit: _.get(response,"weight_unit", ""),
+        contactNo: _.get(response,"contact_no", ""),
+        specialInstructions: _.get(response,"special_instructions", "")
+      });
+      setTrackingDetailsModalState("open");
+    }).catch((e) => {
+      alert(e.msg)
+      setTrackButtonLoading(false)
+    })
+  }
 
   const onPressCheck: MouseEventHandler<HTMLButtonElement> = (event) => {
     let errors = [];
@@ -95,7 +125,7 @@ export default function TrackingSection({ toggleBookingModal, setTrackingDetails
                     type="button"
                     className={withStyles(styles, ['btn', 'btn-primary'])}
                     onClick={(e) => {
-                      setTrackButtonLoading(true)
+                      fetchBookingDetails()
                     }}
                   >
                     {

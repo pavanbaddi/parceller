@@ -13,8 +13,16 @@ export type BookingCardType = {
 }
 
 export type TrackingDetailsType = {
+    id ?: string|null,
     originShipment : string,
     destinationShipment : string,
+    price ?: string|null,
+    remarks ?: string|null,
+    status ?: string|null,
+    trackingId ?: string|null,
+    createdAt ?: string|null,
     weight : string,
-    weightUnit : string,
+    weightUnit: string,
+    contactNo?: string|null,
+    specialInstructions?: string|null
 }

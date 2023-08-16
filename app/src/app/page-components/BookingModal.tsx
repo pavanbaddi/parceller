@@ -7,6 +7,8 @@ import buttonsStyles from '../stylesheets/components/Buttons.module.scss';
 import func from '../functions';
 import _ from 'lodash';
 import { TrackingFormType } from "../lib/Types";
+import { doPost } from "../lib/Datasource";
+import Image from "next/image";
 
 const { usingStyles } = func;
 
@@ -19,15 +21,20 @@ export default function BookingModal({
   trackingForm,
   isOpen,
   onDismiss,
+  setTrackingDetails,
+  setTrackingDetailsModalState
 }: {
   trackingForm: TrackingFormType,
   isOpen: boolean,
-  onDismiss: MouseEventHandler<HTMLButtonElement>
+  onDismiss: MouseEventHandler<HTMLButtonElement>,
+  setTrackingDetails:Function,
+  setTrackingDetailsModalState:Function
 }): React.ReactElement {
   const [form, setForm] = useState({
     contactNo: '',
     specialInstructions: '',
   });
+  const [loading, setLoading] = useState<Boolean>(false)
 
   function hasWords(str:string) {
     return /[a-zA-Z]/.test(str);
@@ -37,7 +44,12 @@ export default function BookingModal({
     return /[!@#$%^&*()_\=\[\]{};':"\\|,.<>\/?]+/.test(str);
   }
 
-  const onCompleteBooking: MouseEventHandler<HTMLButtonElement> = (event) => {
+  const onCompleteBooking: MouseEventHandler<HTMLButtonElement> = () => {
+
+    if (loading) {
+      return;
+    }
+
     let errors = [];
     if (_.isEmpty(form.contactNo)) {
       errors.push('Please enter contact number');
@@ -51,6 +63,47 @@ export default function BookingModal({
     if (errors.length) {
       return alert(errors.join("\n"));
     }
+
+    const formData = new FormData();
+    const body = JSON.stringify({
+      "origin_address" : trackingForm.pickupAddress,
+      "destination_address" : trackingForm.destinationAddress,
+      "weight" : trackingForm.weight,
+      "weight_unit" : trackingForm.weightUnit,
+    })
+    setLoading(true)
+    const endpoint = "/bookings/";
+    doPost(endpoint, body)
+      .then((response: any) => {
+        setLoading(false)
+
+        if (_.has(response, "error")) {
+          let errors = _.flatMap(_.values(response.error))
+          alert(_.join(errors, "\n"))
+        } else {
+          onDismiss()
+          response = response.obj;
+          setTrackingDetails({
+            id: _.get(response,"id", ""),
+            originShipment: _.get(response,"origin_address", ""),
+            destinationShipment: _.get(response,"destination_address", ""),
+            price: _.get(response,"price", ""),
+            remarks: _.get(response,"remarks", ""),
+            status: _.get(response,"status", ""),
+            trackingId: _.get(response,"tracking_id", ""),
+            createdAt: _.get(response,"created_at", ""),
+            weight: _.get(response,"weight", ""),
+            weightUnit: _.get(response,"weight_unit", ""),
+            contactNo: _.get(response,"contact_no", ""),
+            specialInstructions: _.get(response,"special_instructions", "")
+          });
+          setTrackingDetailsModalState("open");
+        }
+    }).catch((e: { msg: any; }) => {
+      alert(e.msg)
+      setLoading(false)
+    })
+
   };
 
   return (
@@ -146,7 +199,9 @@ export default function BookingModal({
                 className={getButtonsStyles('btn btn-primary btn-block')}
                 onClick={onCompleteBooking}
               >
-                Complete Booking
+                {
+                  loading ? <Image src="/assets/icons/loading.gif" alt="Loading" width={15} height={15} /> : "Complete Booking"
+                }
               </button>
             </div>
           </div>
