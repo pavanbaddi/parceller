@@ -18,6 +18,7 @@ import funcs from '../functions';
 import BookingModal from '../page-components/BookingModal';
 import {TrackingDetailsType, TrackingFormType} from "../lib/Types";
 import TrackingDetailsModal from '../page-components/TrackingDetailsModal';
+import Head from 'next/head';
 
 export default function Index() {
   const [loginModalState, setLoginModalState] = useState('closed');
@@ -46,6 +47,10 @@ export default function Index() {
   
   return (
     <>
+      <Head>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+      </Head>
+
       <div
         id="site-container"
         className={[
