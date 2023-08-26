@@ -119,6 +119,10 @@ export default function BookingModal({
 
   };
 
+  const onModalDismiss: MouseEventHandler<HTMLButtonElement> = () => {
+    onDismiss();
+  }
+
   return (
     <Modal
       modalBodyClasses={[
@@ -126,7 +130,7 @@ export default function BookingModal({
         getStyles('modal-body'),
       ]}
       isOpen={isOpen}
-      onDismiss={onDismiss}
+      onDismiss={onModalDismiss}
       id="booking-modal"
       heading="Booking Detail"
       body={
