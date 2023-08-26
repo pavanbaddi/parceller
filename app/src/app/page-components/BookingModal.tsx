@@ -21,12 +21,14 @@ export default function BookingModal({
   trackingForm,
   isOpen,
   onDismiss,
+  setTrackingForm,
   setTrackingDetails,
   setTrackingDetailsModalState
 }: {
   trackingForm: TrackingFormType,
   isOpen: boolean,
-  onDismiss: MouseEventHandler<HTMLButtonElement>,
+  onDismiss: Function,
+  setTrackingForm: Function,
   setTrackingDetails:Function,
   setTrackingDetailsModalState:Function
 }): React.ReactElement {
@@ -69,18 +71,19 @@ export default function BookingModal({
       "origin_address" : trackingForm.pickupAddress,
       "destination_address" : trackingForm.destinationAddress,
       "weight" : trackingForm.weight,
-      "weight_unit" : trackingForm.weightUnit,
+      "weight_unit": trackingForm.weightUnit,
+      "contact_no" : form.contactNo,
+      "special_instructions" : form.specialInstructions,
     })
     setLoading(true)
     const endpoint = "/bookings/";
     doPost(endpoint, body)
       .then((response: any) => {
         setLoading(false)
-
         if (_.has(response, "error")) {
           let errors = _.flatMap(_.values(response.error))
           alert(_.join(errors, "\n"))
-        } else {
+        } else { 
           onDismiss()
           response = response.obj;
           setTrackingDetails({
@@ -98,6 +101,16 @@ export default function BookingModal({
             specialInstructions: _.get(response,"special_instructions", "")
           });
           setTrackingDetailsModalState("open");
+          setTrackingForm({
+            "pickupAddress": "",
+            "destinationAddress": "",
+            "weight": "",
+            "weightUnit": "",
+          });
+          setForm({
+            contactNo: '',
+            specialInstructions: '',
+          });
         }
     }).catch((e: { msg: any; }) => {
       alert(e.msg)

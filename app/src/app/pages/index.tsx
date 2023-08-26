@@ -18,7 +18,6 @@ import funcs from '../functions';
 import BookingModal from '../page-components/BookingModal';
 import {TrackingDetailsType, TrackingFormType} from "../lib/Types";
 import TrackingDetailsModal from '../page-components/TrackingDetailsModal';
-import { doGet } from "../lib/Datasource";
 
 export default function Index() {
   const [loginModalState, setLoginModalState] = useState('closed');
@@ -44,10 +43,6 @@ export default function Index() {
   const toggleAboutDeveloper: MouseEventHandler<HTMLAnchorElement> = (): void  => {
     setAboutDeveloperModalState(aboutDeveloperModalState === 'open' ? 'closed' : 'open')
   }
-
-  useEffect(() => { 
-    doGet("/bookings/419382338");
-  }, [])
   
   return (
     <>
@@ -95,6 +90,7 @@ export default function Index() {
         setTrackingDetails={setTrackingDetails}
         setTrackingDetailsModalState={setTrackingDetailsModalState}
         trackingForm={trackingForm}
+        setTrackingForm={setTrackingForm}
         isOpen={bookingModalState === 'open'}
         onDismiss={() => setBookingModalState('closed')}
       />

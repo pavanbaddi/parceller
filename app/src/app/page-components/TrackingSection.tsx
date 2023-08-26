@@ -27,8 +27,13 @@ export default function TrackingSection({ toggleBookingModal, setTrackingDetails
     }
     
     setTrackButtonLoading(true)
-    doGet(`/bookings/${trackingId}`).then((response) => {
+    doGet(`/bookings/${trackingId}`).then((response:any) => {
       setTrackButtonLoading(false)
+
+      if (response.msg) {
+        return alert(response.msg)
+      }
+
       setTrackingDetails({
         id: _.get(response,"id", ""),
         originShipment: _.get(response,"origin_address", ""),
@@ -44,7 +49,7 @@ export default function TrackingSection({ toggleBookingModal, setTrackingDetails
         specialInstructions: _.get(response,"special_instructions", "")
       });
       setTrackingDetailsModalState("open");
-    }).catch((e) => {
+    }).catch((e:any) => {
       alert(e.msg)
       setTrackButtonLoading(false)
     })
@@ -78,6 +83,13 @@ export default function TrackingSection({ toggleBookingModal, setTrackingDetails
     }
 
     toggleBookingModal(form);
+
+    setForm({
+      "pickupAddress": "",
+      "destinationAddress": "",
+      "weight": "0",
+      "weightUnit": "wg",
+    });
   }
 
   return (
