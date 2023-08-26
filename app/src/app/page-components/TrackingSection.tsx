@@ -141,7 +141,7 @@ export default function TrackingSection({ toggleBookingModal, setTrackingDetails
                     }}
                   >
                     {
-                      trackButtonLoading ? <Image src="/assets/icons/loading.gif" alt="Loading" width={15} height={15} /> : "Tracking"
+                      trackButtonLoading ? <Image src="/assets/icons/loading.gif" alt="Loading" width={15} height={15} /> : "Track"
                     }
                   </button>
                 </div>
@@ -216,7 +216,7 @@ export default function TrackingSection({ toggleBookingModal, setTrackingDetails
                 >
                   <select value={form.weightUnit} onChange={(event: ChangeEvent) => {
                     setForm({...form, weightUnit: _.get(event, "target.value", "wg")})
-                  }} className={withStyles(styles, ['form-control'])}>
+                  }} className={withStyles(styles, ['form-control'])} >
                     <option value="wg" selected={form.weightUnit === "wg"} >Wg</option>
                     <option value="grams" selected={form.weightUnit === "grams"} >Gms</option>
                     <option value="kg" selected={form.weightUnit === "kg"} >KG</option>
