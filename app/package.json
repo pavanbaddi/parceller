@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.8",
+    "@types/node-fetch": "^2.6.4",
     "prettier": "^2.8.8",
     "sass": "^1.62.1"
   }
