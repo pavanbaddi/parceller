@@ -1,4 +1,5 @@
-import fetch, { RequestInit } from "node-fetch";
+import _ from "lodash";
+import fetch, { RequestInit, BodyInit } from "node-fetch";
 
 export function doGet(endpoint: string) {
     const url = `${process.env.NEXT_PUBLIC_API_URL}${endpoint}`
@@ -10,11 +11,12 @@ export function doGet(endpoint: string) {
     });
 }
 
-export function doPost(endpoint: string, data:FormData|string) {
+export function doPost(endpoint: string, data:string) {
+    let body: BodyInit = data
     const url = `${process.env.NEXT_PUBLIC_API_URL}${endpoint}`
     let options: RequestInit = {
         "method" : "POST",
-        "body": data,
+        "body": body,
         "headers": {
             "content-type" : "application/json"
         }
