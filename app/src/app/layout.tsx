@@ -9,10 +9,10 @@ const roboto = Roboto({
   variable:"--font-roboto"
 })
 
-export const metadata = {
-  title: 'Parceller',
-  description: 'Package tracking app',
-};
+// export const metadata = {
+//   title: 'Parceller',
+//   description: 'Package tracking app',
+// };
 
 export default function RootLayout({
   children,

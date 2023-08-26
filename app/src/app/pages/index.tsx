@@ -48,6 +48,7 @@ export default function Index() {
   return (
     <>
       <Head>
+        <title>Parceller</title>
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
       </Head>
 
