@@ -26,8 +26,7 @@ function AboutDeveloperModal({isOpen, onDismiss} : {isOpen: boolean, onDismiss: 
         <br />
         <p>You are free to use this theme on your other project. I have provided github link</p>
         <p>
-          <a href="https://github.com/pavanbaddi/parceller" target="_blank" rel="noopener noreferrer" >Github</a> &nbsp;
-          <a href="https://pavanbaddi.github.io/portfolios/" target="_blank" rel="noopener noreferrer">My Portfolio</a>
+          <a href="https://github.com/pavanbaddi/parceller" target="_blank" rel="noopener noreferrer" >Github</a>
         </p>
       </div>
     </div>
