@@ -22,7 +22,7 @@ export function doPost(endpoint: string, data:string) {
         }
     }
     return fetch(url, options).then((response:any) => response.json()).catch((e:any) => {
-        console.log('Error on doGet', e);
+        console.log('Error on doPost', e);
         return e
     });
 }

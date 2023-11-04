@@ -68,7 +68,6 @@ export default function ContactSection() {
       errors.push('Please enter message');
     } 
 
-    console.log('form', form)
     if (errors.length) {
       return alert(errors.join("\n"));
     }

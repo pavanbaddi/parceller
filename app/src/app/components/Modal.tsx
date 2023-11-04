@@ -85,7 +85,6 @@ export default function Modal({
 
     const didClickedOutside = (event: Event, targetElement: HTMLElement) : boolean => {
         const has = event.composedPath().includes(targetElement);
-        console.log("didClickedOutside has", has)
         return has;
     }
     

@@ -14,8 +14,7 @@ export default function OverlayContainer() {
 
       onClick={(e) => {
         let target = e.target;
-        console.log(target);
-        }}
+      }}
     >
     </div>
   );
