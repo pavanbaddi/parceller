@@ -1,0 +1,1349 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders a heading 1`] = `
+<div>
+  <div
+    class="site-container"
+    id="site-container"
+  >
+    <div
+      class="container nav-container"
+    >
+      <div
+        class="inner"
+      >
+        <div
+          class="inner-item"
+        >
+          <div
+            class="logo-wrapper"
+          >
+            <img
+              alt="Parcellar Logo"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              sizes="100vw"
+              src="/_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=3840&q=75"
+              srcset="/_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=640&q=75 640w, /_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=750&q=75 750w, /_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=828&q=75 828w, /_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=1080&q=75 1080w, /_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=1200&q=75 1200w, /_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=1920&q=75 1920w, /_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=2048&q=75 2048w, /_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=3840&q=75 3840w"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+            />
+          </div>
+        </div>
+        <div
+          class="inner-item menu-wrapper"
+          id="menu-wrapper"
+        >
+          <div
+            class="menus-list"
+          >
+            <div
+              class="menu-list__item"
+            >
+              <a
+                href="#"
+              >
+                Home
+              </a>
+            </div>
+            <div
+              class="menu-list__item"
+            >
+              <a
+                href="#"
+              >
+                About Site & Developer
+              </a>
+            </div>
+            <div
+              class="menu-list__item"
+            >
+              <a
+                href="#why_choose_us"
+              >
+                Why Choose Us
+              </a>
+            </div>
+            <div
+              class="menu-list__item"
+            >
+              <a
+                href="#testimonials"
+              >
+                Testimonials
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="inner-item"
+        >
+          <div
+            class="action-wrapper"
+          >
+            <a
+              class="btn btn-primary hidden-sm"
+              href="#contact-section"
+              id="login-btn"
+            >
+              <span />
+              <span>
+                Contact Us
+              </span>
+            </a>
+            <div
+              class="hidden-md-lg"
+            >
+              <div
+                class="flex-inner"
+              >
+                <div
+                  id="login-btn-mobile"
+                >
+                  <img
+                    alt=""
+                    data-nimg="1"
+                    decoding="async"
+                    height="30"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fassets%2Ficons%2Flogin.png&w=64&q=75"
+                    srcset="/_next/image?url=%2Fassets%2Ficons%2Flogin.png&w=32&q=75 1x, /_next/image?url=%2Fassets%2Ficons%2Flogin.png&w=64&q=75 2x"
+                    style="color: transparent;"
+                    width="30"
+                  />
+                </div>
+                <div
+                  id="mobile-menu-wrapper"
+                >
+                  <img
+                    alt=""
+                    data-nimg="1"
+                    decoding="async"
+                    height="30"
+                    loading="lazy"
+                    src="/_next/image?url=%2Fassets%2Ficons%2Fmenu.png&w=64&q=75"
+                    srcset="/_next/image?url=%2Fassets%2Ficons%2Fmenu.png&w=32&q=75 1x, /_next/image?url=%2Fassets%2Ficons%2Fmenu.png&w=64&q=75 2x"
+                    style="color: transparent;"
+                    width="30"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container landing-page-container"
+    >
+      <div
+        class="bg-image"
+      />
+      <div
+        class="inner"
+      >
+        <div
+          class="wrapper"
+        >
+          <div>
+            <p>
+              International Logistics
+            </p>
+            <h1
+              id="text-animation"
+            >
+              L
+            </h1>
+            <p>
+              Swift, Secure, and Reliable. Our Courier Services Exceed Expectations
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container tracking-section hidden-sm"
+    >
+      <div
+        class="inner"
+      >
+        <div
+          class="tracking-and-pricing-calculator-form-container"
+        >
+          <div
+            class="tracking-wrapper"
+          >
+            <div
+              class="inner"
+            >
+              <p>
+                Track Shipment
+              </p>
+              <div
+                class="row-form"
+              >
+                <div
+                  class="row-form-item"
+                >
+                  <div>
+                    <input
+                      class="form-control"
+                      id="tracking_no"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <div>
+                    <p
+                      class="help-text"
+                    >
+                      Tracking ID
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="row-form-item btn-wrapper"
+                >
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                  >
+                    Track
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="shipment-rate-wrapper"
+          >
+            <div
+              class="inner"
+            >
+              <p>
+                Track Shipment
+              </p>
+              <div
+                class="row-form"
+              >
+                <div
+                  class="row-form-item"
+                >
+                  <div>
+                    <input
+                      class="form-control bg-light__grey"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <div>
+                    <p>
+                      Origin Shipment
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="row-form-item"
+                >
+                  <div>
+                    <input
+                      class="form-control bg-light__grey"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <div>
+                    <p>
+                      Destination Shipment
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="row-form-item weight-wrapper"
+                >
+                  <input
+                    class="form-control bg-light__grey"
+                    type="text"
+                    value="0"
+                  />
+                  <div>
+                    <p>
+                      Weight
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="row-form-item weight-select-wrapper"
+                >
+                  <select
+                    class="form-control"
+                  >
+                    <option
+                      value="wg"
+                    >
+                      Wg
+                    </option>
+                    <option
+                      value="grams"
+                    >
+                      Gms
+                    </option>
+                    <option
+                      value="kg"
+                    >
+                      KG
+                    </option>
+                  </select>
+                </div>
+                <div
+                  class="row-form-item"
+                >
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                  >
+                    Check
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container clients-list-container v-space-md"
+    >
+      <div
+        class="inner"
+      >
+        <div
+          class="header-wrapper"
+        >
+          <h2>
+            Over 93 Clients All Over The World
+          </h2>
+        </div>
+        <div
+          class="inner-list keen-slider"
+        >
+          <div
+            class="keen-slider__slide"
+          >
+            <img
+              alt=""
+              data-nimg="1"
+              decoding="async"
+              height="80"
+              loading="lazy"
+              src="/_next/image?url=%2Fassets%2Fimages%2Fclients%2F2.png&w=256&q=75"
+              srcset="/_next/image?url=%2Fassets%2Fimages%2Fclients%2F2.png&w=96&q=75 1x, /_next/image?url=%2Fassets%2Fimages%2Fclients%2F2.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="80"
+            />
+          </div>
+          <div
+            class="keen-slider__slide"
+          >
+            <img
+              alt=""
+              data-nimg="1"
+              decoding="async"
+              height="80"
+              loading="lazy"
+              src="/_next/image?url=%2Fassets%2Fimages%2Fclients%2F3.png&w=256&q=75"
+              srcset="/_next/image?url=%2Fassets%2Fimages%2Fclients%2F3.png&w=96&q=75 1x, /_next/image?url=%2Fassets%2Fimages%2Fclients%2F3.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="80"
+            />
+          </div>
+          <div
+            class="keen-slider__slide"
+          >
+            <img
+              alt=""
+              data-nimg="1"
+              decoding="async"
+              height="80"
+              loading="lazy"
+              src="/_next/image?url=%2Fassets%2Fimages%2Fclients%2F4.png&w=256&q=75"
+              srcset="/_next/image?url=%2Fassets%2Fimages%2Fclients%2F4.png&w=96&q=75 1x, /_next/image?url=%2Fassets%2Fimages%2Fclients%2F4.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="80"
+            />
+          </div>
+          <div
+            class="keen-slider__slide"
+          >
+            <img
+              alt=""
+              data-nimg="1"
+              decoding="async"
+              height="80"
+              loading="lazy"
+              src="/_next/image?url=%2Fassets%2Fimages%2Fclients%2F5.png&w=256&q=75"
+              srcset="/_next/image?url=%2Fassets%2Fimages%2Fclients%2F5.png&w=96&q=75 1x, /_next/image?url=%2Fassets%2Fimages%2Fclients%2F5.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="80"
+            />
+          </div>
+          <div
+            class="keen-slider__slide"
+          >
+            <img
+              alt=""
+              data-nimg="1"
+              decoding="async"
+              height="80"
+              loading="lazy"
+              src="/_next/image?url=%2Fassets%2Fimages%2Fclients%2F6.png&w=256&q=75"
+              srcset="/_next/image?url=%2Fassets%2Fimages%2Fclients%2F6.png&w=96&q=75 1x, /_next/image?url=%2Fassets%2Fimages%2Fclients%2F6.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="80"
+            />
+          </div>
+          <div
+            class="keen-slider__slide"
+          >
+            <img
+              alt=""
+              data-nimg="1"
+              decoding="async"
+              height="80"
+              loading="lazy"
+              src="/_next/image?url=%2Fassets%2Fimages%2Fclients%2F7.png&w=256&q=75"
+              srcset="/_next/image?url=%2Fassets%2Fimages%2Fclients%2F7.png&w=96&q=75 1x, /_next/image?url=%2Fassets%2Fimages%2Fclients%2F7.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="80"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container why-choose-us-container"
+      id="why_choose_us"
+    >
+      <div
+        class="inner"
+      >
+        <div
+          class="header-wrapper"
+        >
+          <h2>
+            Why choose us for your service
+          </h2>
+          <p>
+            Cursus congue tortor turpis faucibus ollicitudin diam massa accumsan egestas habitant ut placerat nascetur sed
+          </p>
+        </div>
+      </div>
+      <div
+        class="items"
+      >
+        <div
+          class="item"
+        >
+          <div
+            class="image-wrapper"
+          >
+            <img
+              alt=""
+              data-nimg="1"
+              decoding="async"
+              height="84"
+              loading="lazy"
+              src="/_next/image?url=%2Fassets%2Fimages%2Fdrone.png&w=256&q=75"
+              srcset="/_next/image?url=%2Fassets%2Fimages%2Fdrone.png&w=96&q=75 1x, /_next/image?url=%2Fassets%2Fimages%2Fdrone.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="80"
+            />
+          </div>
+          <div
+            class="animated-text-container"
+          >
+            <h4>
+              Fast Delivery
+            </h4>
+            <p>
+              Helps you move items faster
+            </p>
+          </div>
+        </div>
+        <div
+          class="item"
+        >
+          <div
+            class="image-wrapper"
+          >
+            <img
+              alt=""
+              data-nimg="1"
+              decoding="async"
+              height="84"
+              loading="lazy"
+              src="/_next/image?url=%2Fassets%2Fimages%2Fwarehouse.png&w=256&q=75"
+              srcset="/_next/image?url=%2Fassets%2Fimages%2Fwarehouse.png&w=96&q=75 1x, /_next/image?url=%2Fassets%2Fimages%2Fwarehouse.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="80"
+            />
+          </div>
+          <div
+            class="animated-text-container"
+          >
+            <h4>
+              Warehouse
+            </h4>
+            <p>
+              Safety of your belonging is on our top priority
+            </p>
+          </div>
+        </div>
+        <div
+          class="item"
+        >
+          <div
+            class="image-wrapper"
+          >
+            <img
+              alt=""
+              data-nimg="1"
+              decoding="async"
+              height="84"
+              loading="lazy"
+              src="/_next/image?url=%2Fassets%2Fimages%2Fpricing.png&w=256&q=75"
+              srcset="/_next/image?url=%2Fassets%2Fimages%2Fpricing.png&w=96&q=75 1x, /_next/image?url=%2Fassets%2Fimages%2Fpricing.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="80"
+            />
+          </div>
+          <div
+            class="animated-text-container"
+          >
+            <h4>
+              Cost Effective
+            </h4>
+            <p>
+              Best pricing comparitive to others
+            </p>
+          </div>
+        </div>
+        <div
+          class="item"
+        >
+          <div
+            class="image-wrapper"
+          >
+            <img
+              alt=""
+              data-nimg="1"
+              decoding="async"
+              height="84"
+              loading="lazy"
+              src="/_next/image?url=%2Fassets%2Fimages%2Fcustomer-support.png&w=256&q=75"
+              srcset="/_next/image?url=%2Fassets%2Fimages%2Fcustomer-support.png&w=96&q=75 1x, /_next/image?url=%2Fassets%2Fimages%2Fcustomer-support.png&w=256&q=75 2x"
+              style="color: transparent;"
+              width="80"
+            />
+          </div>
+          <div
+            class="animated-text-container"
+          >
+            <h4>
+              Customer Support
+            </h4>
+            <p>
+              Reach us with a press of a button
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="contact-container"
+      id="contact-section"
+    >
+      <div
+        class="inner"
+      >
+        <div
+          class="inner-item map-container"
+        >
+          <iframe
+            height="100%"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497699.9973874144!2d77.35074421903857!3d12.95384772557775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1684989581215!5m2!1sen!2sin"
+            style="border: 0px;"
+            width="100%"
+          />
+        </div>
+        <div
+          class="inner-item form-container"
+        >
+          <div
+            class="form-containner__wrapper"
+          >
+            <div>
+              <p
+                class="text-1"
+              >
+                CONTACT US
+              </p>
+              <h1
+                class="text-2"
+              >
+                Have Questions?
+              </h1>
+              <h1
+                class="text-3"
+              >
+                Get in touch!
+              </h1>
+            </div>
+            <div>
+              <form
+                method="post"
+              >
+                <div
+                  class="form-wrapper form-wrapper-1"
+                >
+                  <div
+                    class="form-group"
+                  >
+                    <input
+                      class="form-control line"
+                      placeholder="First Name *"
+                      required=""
+                      type="text"
+                      value=""
+                    />
+                    <span
+                      class="line"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      class="form-control line"
+                      placeholder="Last Name"
+                      type="text"
+                      value=""
+                    />
+                    <span
+                      class="line"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="form-wrapper form-wrapper-1"
+                >
+                  <div>
+                    <div
+                      class="form-group"
+                    >
+                      <input
+                        class="form-control line"
+                        placeholder="Email *"
+                        required=""
+                        type="email"
+                        value=""
+                      />
+                      <span
+                        class="line"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <input
+                      class="form-control line"
+                      placeholder="Phone *"
+                      required=""
+                      type="number"
+                      value=""
+                    />
+                    <span
+                      class="line"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="form-wrapper form-wrapper-2"
+                >
+                  <div>
+                    <input
+                      class="form-control line"
+                      placeholder="Message *"
+                      required=""
+                      type="text"
+                      value=""
+                    />
+                    <span
+                      class="line"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="form-wrapper-4"
+                >
+                  <span
+                    class="btn-container with-icon"
+                  >
+                    <i
+                      class="fa-sharp fa-solid fa-paper-plane"
+                    />
+                    <input
+                      type="submit"
+                      value="Get in touch"
+                    />
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container testimonial-container v-space-md"
+      id="testimonials"
+    >
+      <div
+        class="inner"
+      >
+        <div
+          class="header-wrapper"
+        >
+          <h2>
+            Testimonials
+          </h2>
+        </div>
+        <div
+          class="items keen-slider"
+        >
+          <div
+            class="item keen-slider__slide"
+          >
+            <div
+              class="item__img-wrapper"
+            >
+              <img
+                alt=""
+                data-nimg="1"
+                decoding="async"
+                height="150"
+                loading="lazy"
+                src="/_next/image?url=%2Fassets%2Fimages%2Ftestimonials%2F1.png&w=384&q=75"
+                srcset="/_next/image?url=%2Fassets%2Fimages%2Ftestimonials%2F1.png&w=256&q=75 1x, /_next/image?url=%2Fassets%2Fimages%2Ftestimonials%2F1.png&w=384&q=75 2x"
+                style="color: transparent;"
+                width="150"
+              />
+            </div>
+            <div
+              class="item__text-wrapper"
+            >
+              <div
+                class="text-group"
+              >
+                <div>
+                  <p>
+                     
+                    <span>
+                      <img
+                        alt=""
+                        data-nimg="1"
+                        decoding="async"
+                        height="20"
+                        loading="lazy"
+                        src="/_next/image?url=%2Fassets%2Ficons%2Fquote.png&w=48&q=75"
+                        srcset="/_next/image?url=%2Fassets%2Ficons%2Fquote.png&w=32&q=75 1x, /_next/image?url=%2Fassets%2Ficons%2Fquote.png&w=48&q=75 2x"
+                        style="color: transparent;"
+                        width="20"
+                      />
+                    </span>
+                    Absolutely delighted with the service. My package was delivered quickly and without any issues. The tracking feature was helpful, and I knew exactly when to expect my delivery.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="name-group"
+              >
+                <h4>
+                  Pavan Baddi
+                </h4>
+                <p>
+                  Software Engineer
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container v-space-xs social-media-container"
+    >
+      <div
+        class="inner"
+      >
+        <div
+          class="logo-wrapper"
+        >
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            height="52"
+            loading="lazy"
+            src="/_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=384&q=75"
+            srcset="/_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=256&q=75 1x, /_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=384&q=75 2x"
+            style="color: transparent;"
+            width="155"
+          />
+        </div>
+        <div>
+          <div
+            class="items"
+          >
+            <a
+              class="item"
+              href="#!"
+            >
+              <img
+                alt=""
+                data-nimg="1"
+                decoding="async"
+                height="30"
+                loading="lazy"
+                src="/_next/image?url=%2Fassets%2Ficons%2Ffacebook.png&w=64&q=75"
+                srcset="/_next/image?url=%2Fassets%2Ficons%2Ffacebook.png&w=32&q=75 1x, /_next/image?url=%2Fassets%2Ficons%2Ffacebook.png&w=64&q=75 2x"
+                style="color: transparent;"
+                width="30"
+              />
+            </a>
+            <a
+              class="item"
+              href="#!"
+            >
+              <img
+                alt=""
+                data-nimg="1"
+                decoding="async"
+                height="30"
+                loading="lazy"
+                src="/_next/image?url=%2Fassets%2Ficons%2Ftwitter.png&w=64&q=75"
+                srcset="/_next/image?url=%2Fassets%2Ficons%2Ftwitter.png&w=32&q=75 1x, /_next/image?url=%2Fassets%2Ficons%2Ftwitter.png&w=64&q=75 2x"
+                style="color: transparent;"
+                width="30"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="footer-container container v-space-md"
+    >
+      <div
+        class="inner"
+      >
+        <div
+          class="items"
+        >
+          <div
+            class="item"
+          >
+            <h4>
+              Address
+            </h4>
+            <p>
+              Head Office, Rajajinagar H.O ; Contact Address: Postmaster, Bangalore City S.O, Bengaluru, Karnataka, India (IN)
+            </p>
+          </div>
+          <div
+            class="item"
+          />
+          <div
+            class="item"
+          >
+            <p>
+              <a
+                href="#!"
+              >
+                About Site & Developer
+              </a>
+            </p>
+            <p>
+              <a
+                href="#why_choose_us"
+              >
+                Why Choose Us
+              </a>
+            </p>
+            <p>
+              <a
+                href="#testimonials"
+              >
+                Testimonials
+              </a>
+            </p>
+          </div>
+          <div
+            class="item"
+          >
+            <h4>
+              Contact
+            </h4>
+            <p>
+              +91 88990 88990
+            </p>
+            <p>
+              support@parceller.Com
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal-container modal-md"
+    id="login-modal"
+  >
+    <div
+      class="modal-heading"
+    >
+      <div>
+        <h3>
+          Login
+        </h3>
+      </div>
+      <div>
+        <button
+          class="btn btn-plain"
+          data-button="close"
+          type="button"
+        >
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            height="15"
+            loading="lazy"
+            src="/_next/image?url=%2Fassets%2Ficons%2Fclose.png&w=32&q=75"
+            srcset="/_next/image?url=%2Fassets%2Ficons%2Fclose.png&w=16&q=75 1x, /_next/image?url=%2Fassets%2Ficons%2Fclose.png&w=32&q=75 2x"
+            style="color: transparent;"
+            width="15"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="modal-body modal-body"
+    >
+      <div
+        class="form-container"
+      >
+        <form
+          action=""
+          method="post"
+        >
+          <div
+            class="mb-15"
+          >
+            <label>
+              Email
+               
+              <span
+                class="text-danger"
+              >
+                *
+              </span>
+               
+            </label>
+            <div
+              class="mt-5"
+            >
+              <input
+                class="form-control bg-light__grey"
+                name="email"
+                required=""
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="mb-15"
+          >
+            <label>
+              Password
+               
+              <span
+                class="text-danger"
+              >
+                *
+              </span>
+            </label>
+            <div
+              class="mt-5"
+            >
+              <input
+                class="form-control bg-light__grey"
+                name="password"
+                required=""
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="mb-15"
+          >
+            <div>
+              <button
+                class="btn btn-primary btn-block"
+                type="button"
+              >
+                Login
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div
+        class="social-media-container"
+      >
+        <div
+          class="items"
+        >
+          <div
+            class="item"
+          >
+            <button
+              class="btn btn-secondary btn-block"
+              type="button"
+            >
+              <span>
+                Login via
+              </span>
+              <span>
+                <img
+                  alt=""
+                  src="/assets/icons/google.png"
+                />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div
+        class="alert alert-warning"
+      >
+        <div>
+          <p>
+            Site backend is under development
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal-container modal-md"
+    id="about-developer"
+  >
+    <div
+      class="modal-heading"
+    >
+      <div>
+        <h3>
+          About Site & Developer
+        </h3>
+      </div>
+      <div>
+        <button
+          class="btn btn-plain"
+          data-button="close"
+          type="button"
+        >
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            height="15"
+            loading="lazy"
+            src="/_next/image?url=%2Fassets%2Ficons%2Fclose.png&w=32&q=75"
+            srcset="/_next/image?url=%2Fassets%2Ficons%2Fclose.png&w=16&q=75 1x, /_next/image?url=%2Fassets%2Ficons%2Fclose.png&w=32&q=75 2x"
+            style="color: transparent;"
+            width="15"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="modal-body"
+    >
+      <div>
+        <div>
+          <h4>
+            About Site
+          </h4>
+          <p>
+            The 
+            <strong>
+              Parcellar
+            </strong>
+             is a landing page theme for transportation and logistic sites. This site is developed using Next JS (Version 13.3.1).
+          </p>
+          <br />
+          <hr />
+          <br />
+          <h4>
+            About Developer
+          </h4>
+          <p>
+            Hi, I'm 
+            <strong>
+              Pavan
+            </strong>
+            ,
+          </p>
+          <br />
+          <p>
+            I'm a Software Engineer and from time to time I keep on learning and developing portfolio projects for sake of learning and broadening my knowledge.
+          </p>
+          <br />
+          <p>
+            In this case, it is to learn about Typescript in Next JS (using its Advance features) and also deploy this app using Vercel.
+          </p>
+          <br />
+          <p>
+            You are free to use this theme on your other project. I have provided github link
+          </p>
+          <p>
+            <a
+              href="https://github.com/pavanbaddi/parceller"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Github
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal-container modal-md"
+    id="booking-modal"
+  >
+    <div
+      class="modal-heading"
+    >
+      <div>
+        <h3>
+          Booking Detail
+        </h3>
+      </div>
+      <div>
+        <button
+          class="btn btn-plain"
+          data-button="close"
+          type="button"
+        >
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            height="15"
+            loading="lazy"
+            src="/_next/image?url=%2Fassets%2Ficons%2Fclose.png&w=32&q=75"
+            srcset="/_next/image?url=%2Fassets%2Ficons%2Fclose.png&w=16&q=75 1x, /_next/image?url=%2Fassets%2Ficons%2Fclose.png&w=32&q=75 2x"
+            style="color: transparent;"
+            width="15"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="modal-body overflow-none modal-body"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="card"
+        >
+          <div>
+            <p>
+              Origin Shipment
+            </p>
+            <p>
+              <small />
+            </p>
+          </div>
+          <div>
+            <p>
+              Destination Shipment
+            </p>
+            <p>
+              <small />
+            </p>
+          </div>
+          <div>
+            <p>
+              Weight:
+            </p>
+            <p>
+              <strong>
+                 
+              </strong>
+            </p>
+          </div>
+        </div>
+        <div
+          class="mt-25"
+        >
+          <div>
+            <label
+              for="contact_no"
+            >
+              Contact No
+               
+              <span
+                class="text-danger"
+              >
+                *
+              </span>
+            </label>
+            <input
+              class="mt-5 form-control bg-light__grey"
+              id="contact_no"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="mt-10"
+          >
+            <label
+              for="special_instructions"
+            >
+              Special Instructions (if any)
+            </label>
+            <input
+              class="mt-5 form-control bg-light__grey"
+              id="special_instructions"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="mt-25"
+          >
+            <button
+              class="btn btn-primary btn-block"
+              type="button"
+            >
+              Complete Booking
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="modal-container modal-md"
+    id="booking--details-modal"
+  >
+    <div
+      class="modal-heading"
+    >
+      <div>
+        <h3>
+          Tracking Details
+        </h3>
+      </div>
+      <div>
+        <button
+          class="btn btn-plain"
+          data-button="close"
+          type="button"
+        >
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            height="15"
+            loading="lazy"
+            src="/_next/image?url=%2Fassets%2Ficons%2Fclose.png&w=32&q=75"
+            srcset="/_next/image?url=%2Fassets%2Ficons%2Fclose.png&w=16&q=75 1x, /_next/image?url=%2Fassets%2Ficons%2Fclose.png&w=32&q=75 2x"
+            style="color: transparent;"
+            width="15"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="modal-body overflow-none modal-body"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="card"
+        >
+          <div>
+            <p>
+              Origin Shipment
+            </p>
+            <p>
+              <small />
+            </p>
+          </div>
+          <div>
+            <p>
+              Destination Shipment
+            </p>
+            <p>
+              <small />
+            </p>
+          </div>
+          <div>
+            <p>
+              Weight:
+            </p>
+            <p>
+              <strong>
+                 
+              </strong>
+            </p>
+          </div>
+        </div>
+        <div
+          class="mt-25"
+        >
+          <div
+            class="alert"
+          >
+            <p>
+              Tracking Id: 
+            </p>
+            <hr />
+            <p>
+              Status: 
+            </p>
+            <hr />
+            <p>
+              Remarks:
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="overlay-container"
+    id="overlay-container"
+  />
+</div>
+`;

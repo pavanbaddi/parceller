@@ -1,5 +1,5 @@
 const withStyles = (
-  stylesheet: Object,
+  stylesheet: {[key:string] : any},
   keys: Array<string> | string,
 ): string => {
   let text = '';
@@ -8,16 +8,13 @@ const withStyles = (
   if (typeof keys === 'string') {
     changedKeys = keys.split(' ');
   }
-
+  
   if (Array.isArray(changedKeys)) {
     for (let index in changedKeys) {
-      const key = changedKeys[index];
-      if (stylesheet.hasOwnProperty(key)) {
-        const styleName = stylesheet[key as keyof typeof stylesheet];
-
-        if (styleName) {
-          text = `${text} ${styleName}`;
-        }
+      const key:string = changedKeys[index];
+      
+      if (stylesheet[key]) {
+        text = `${text} ${stylesheet[key]}`;
       }
     }
   } else {

@@ -16,34 +16,41 @@ import styles from '../stylesheets/index/Index.module.scss';
 import modelStyles from '../stylesheets/components/Modal.module.scss';
 import funcs from '../functions';
 import BookingModal from '../page-components/BookingModal';
-import {TrackingDetailsType, TrackingFormType} from "../lib/Types";
+import { TrackingDetailsType, TrackingFormType } from '../lib/Types';
 import TrackingDetailsModal from '../page-components/TrackingDetailsModal';
 
-export default function Index() {
+export default function Home() {
   const [loginModalState, setLoginModalState] = useState('closed');
-  const [aboutDeveloperModalState, setAboutDeveloperModalState] = useState('closed');
+  const [aboutDeveloperModalState, setAboutDeveloperModalState] =
+    useState('closed');
   const [bookingModalState, setBookingModalState] = useState('closed');
-  const [trackingDetailsModalState, setTrackingDetailsModalState] = useState('closed');
+  const [trackingDetailsModalState, setTrackingDetailsModalState] =
+    useState('closed');
   const [trackingForm, setTrackingForm] = useState<TrackingFormType>({
-    "pickupAddress": "",
-    "destinationAddress": "",
-    "weight": "",
-    "weightUnit": "",
-  }); 
+    pickupAddress: '',
+    destinationAddress: '',
+    weight: '',
+    weightUnit: '',
+  });
 
   const [trackingDetails, setTrackingDetails] = useState<TrackingDetailsType>({
-    "originShipment": "",
-    "destinationShipment": "",
-    "weight": "",
-    "weightUnit": "",
-  }); 
+    originShipment: '',
+    destinationShipment: '',
+    weight: '',
+    weightUnit: '',
+  });
 
-  const isAnyModalVisible = () => [loginModalState, aboutDeveloperModalState].some(e => e === "open")
+  const isAnyModalVisible = () =>
+    [loginModalState, aboutDeveloperModalState].some((e) => e === 'open');
 
-  const toggleAboutDeveloper: MouseEventHandler<HTMLAnchorElement> = (): void  => {
-    setAboutDeveloperModalState(aboutDeveloperModalState === 'open' ? 'closed' : 'open')
-  }
-  
+  const toggleAboutDeveloper: MouseEventHandler<
+    HTMLAnchorElement
+  > = (): void => {
+    setAboutDeveloperModalState(
+      aboutDeveloperModalState === 'open' ? 'closed' : 'open',
+    );
+  };
+
   return (
     <>
       <div
@@ -59,12 +66,14 @@ export default function Index() {
             setLoginModalState(loginModalState === 'open' ? 'closed' : 'open');
           }}
           toggleAboutDeveloper={toggleAboutDeveloper}
-          />
+        />
         <LandingSection />
         <TrackingSection
           toggleBookingModal={(form: TrackingFormType) => {
-            setBookingModalState(bookingModalState === 'open' ? 'closed' : 'open');
-            setTrackingForm(form)
+            setBookingModalState(
+              bookingModalState === 'open' ? 'closed' : 'open',
+            );
+            setTrackingForm(form);
           }}
           setTrackingDetailsModalState={setTrackingDetailsModalState}
           setTrackingDetails={setTrackingDetails}
